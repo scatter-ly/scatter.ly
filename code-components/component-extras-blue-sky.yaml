@@ -1,0 +1,47 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponentSidecar
+metadata:
+  name: retail-app-extras
+spec:
+  codecomponent: retail-app
+  platform: retail
+  lifecycle: production
+  priority: 2
+  sla: 8x5
+  isPageable: true
+  oncall1: eng-raccoon-eco
+  oncall2: eng-raccoon-eco
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponentSidecar
+metadata:
+  name: retail-backend-extras
+spec:
+  codecomponent: retail-backend
+  platform: retail
+  lifecycle: production
+  priority: 2
+  sla: 8x5
+  isPageable: true
+  oncall1: eng-raccoon-eco
+  oncall2: eng-raccoon-eco
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponentSidecar
+metadata:
+  name: wholesale-cli-extras
+spec:
+  codecomponent: wholesale-cli
+  platform: wholesale
+  lifecycle: experimental
+  isPageable: false
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponentSidecar
+metadata:
+  name: wholesale-graphql-extras
+spec:
+  codecomponent: wholesale-graphql
+  platform: wholesale
+  lifecycle: experimental
+  isPageable: false

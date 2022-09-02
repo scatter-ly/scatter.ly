@@ -1,0 +1,18 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: greenhouse-mobile
+  description: Greenhouse mobile app
+  title: Greenhouse mobile
+  tags:
+    - ios
+    - android
+  links:
+    - url: https://example.com/help
+      title: Support
+      icon: help
+spec:
+  type: package
+  owner: [eng-squirrel-mob, eng-squirrel-qa, prod-squirrel-mob]
+  dependsOn: [code-component:greenhouse-data]
+  uri: https://example.com/greenhouse

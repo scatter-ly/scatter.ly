@@ -1,0 +1,92 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: prod-squirrel
+  description: Squirrel Product Team
+spec:
+  type: department
+  profile:
+    displayName: Squirrel Product Team
+    email: prod-squirrel@example.com
+    picture: https://avatars.dicebear.com/api/identicon/prod-squirrel@example.com.svg?background=%23fff&margin=25
+  parent: team-squirrel
+  children: [prod-squirrel-mob, prod-squirrel-data]
+  members: [sam, stacie, joe, sophie, brian]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: prod-squirrel-mob
+  description: Squirrel Mobile Product Team
+spec:
+  type: department
+  profile:
+    displayName: Squirrel Mobile Product Team
+    email: prod-squirrel-mob@example.com
+    picture: https://avatars.dicebear.com/api/identicon/prod-squirrel-mob@example.com.svg?background=%23fff&margin=25
+  parent: prod-squirrel
+  children: []
+  members: [sam, stacie]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: prod-squirrel-data
+  description: Squirrel Data Product Team
+spec:
+  type: department
+  profile:
+    displayName: Squirrel Data Product Team
+    email: prod-squirrel-data@example.com
+    picture: https://avatars.dicebear.com/api/identicon/prod-squirrel-data@example.com.svg?background=%23fff&margin=25
+  parent: prod-squirrel
+  children: []
+  members: [joe, sophie]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: sam
+spec:
+  primaryEmail: sam@example.com
+  profile:
+    displayName: sam
+    displayEmail: sam@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/sam@example.com.svg?background=%23fff
+  memberOf: [prod-squirrel, prod-squirrel-mob]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: stacie
+spec:
+  primaryEmail: stacie@example.com
+  profile:
+    displayName: Stacie
+    displayEmail: stacie@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/stacie@example.com.svg?background=%23fff&topChance=100&top[]=bun
+  memberOf: [prod-squirrel, prod-squirrel-mob]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: joe
+spec:
+  primaryEmail: joe@example.com
+  profile:
+    displayName: Joe
+    displayEmail: joe@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/joe@example.com.svg?background=%23fff&topChance=100&top[]=sides
+  memberOf: [prod-squirrel, prod-squirrel-data]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: sophie
+spec:
+  primaryEmail: sophie@example.com
+  profile:
+    displayName: Sophie
+    displayEmail: sophie@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/sophie@example.com.svg?background=%23fff&topChance=100&top[]=longHair
+  memberOf: [prod-squirrel, prod-squirrel-data]

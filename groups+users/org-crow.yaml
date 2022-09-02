@@ -1,0 +1,47 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: contract-crow
+  description: Crow Contractors
+spec:
+  type: department
+  profile:
+    displayName: Crow Contractors
+    email: crows@example.com
+    picture: https://avatars.dicebear.com/api/identicon/crows@example.com.svg?background=%23fff&margin=25
+    timezone: Australia/Melbourne
+    slackHandle: crow-contractors
+    pagerHandle: crow-contractors
+  parent: oc-inc
+  children: []
+  members: [paul, michael]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: paul
+spec:
+  primaryEmail: paul@example.com
+  profile:
+    displayName: Paul
+    displayEmail: paul@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/paul@example.com.svg?background=%23fff&topChance=100&eyes=default&mouth=default&top[]=shortFlat
+    timezone: Australia/Perth
+    slackHandle: paul
+    role: Engineer
+  memberOf: [contract-crow, eng-raccoon-cloud]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: michael
+spec:
+  primaryEmail: michael@example.com
+  profile:
+    displayName: Michael
+    displayEmail: michael@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/michael@example.com.svg?background=%23fff&topChance=100&eyes=default&mouth=default&top[]=shortFlat
+    timezone: Australia/Perth
+    slackHandle: michael
+    role: Engineer
+  memberOf: [contract-crow, eng-raccoon-eco]

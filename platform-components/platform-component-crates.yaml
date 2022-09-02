@@ -1,0 +1,35 @@
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: crates-db
+  description: Crates ERP data warehouse
+spec:
+  type: database
+  lifecycle: production
+  owner: [eng-squirrel]
+  platform: crates
+  datacenter: [aws]
+  dependsOn: [datacenter:aws]
+  dependencyOf: [code-component:crates-erp]
+  priority: 2
+  sla: 24x5
+  isPageable: true
+  oncall1: user:bill
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: crates-config
+  description: Crates config bucket
+spec:
+  type: s3
+  lifecycle: production
+  owner: [eng-squirrel]
+  platform: crates
+  datacenter: [aws]
+  dependencyOf: [platform-component:crates-db, code-component:crates-erp]
+  uri: s3://crates-config
+  priority: 3
+  sla: 24x5
+  isPageable: true
+  oncall1: eng-squirrel

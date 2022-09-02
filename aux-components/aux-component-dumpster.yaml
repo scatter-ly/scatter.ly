@@ -1,0 +1,52 @@
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: dumpster-map-docs
+  title: Dumpster map docs
+  description: Dumpster map documentation
+spec:
+  type: document
+  lifecycle: planning
+  owner: [prod-raccoon-oss]
+  platform: dumpster-prod
+  uri: https://example.com/docsdocs
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: dumpster-docs
+  title: Dumpster docs
+  description: Dumpster project planning docs
+spec:
+  type: document
+  lifecycle: planning
+  owner: [eng-raccoon-eco]
+  platform: dumpster-prod
+  uri: https://example.com/projdocs
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: dumpster-demo
+  title: Dumpster demo
+  description: Dumpster map demo website
+spec:
+  type: website
+  lifecycle: planning
+  owner: [eng-raccoon-cloud, prod-raccoon-oss]
+  dependsOn: [code-component:dumpster-data]
+  platform: dumpster-prod
+  uri: https://example.com/website
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: map-thingy
+  title: Map thingy
+  description: Prototyping toolkit for maps
+spec:
+  type: tool
+  lifecycle: planning
+  owner: [eng-raccoon-eco, prod-raccoon-ent]
+  platform: dumpster-prod
+  uri: https://example.com/website

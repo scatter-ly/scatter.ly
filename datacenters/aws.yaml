@@ -1,0 +1,12 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Datacenter
+metadata:
+  name: aws
+  title: AWS
+  description: Amazon Web Services
+spec:
+  type: cloud
+  owner: [cloud-team]
+  region: us-east-1
+  isPageable: true
+  oncall1: cloud-team

@@ -1,0 +1,11 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Location
+metadata:
+  name: oc-datacenters
+  description: A collection of all OpenContext Datacenters
+spec:
+  targets:
+    - ./datacenters/gcp.yaml
+    - ./datacenters/aws.yaml
+    - ./datacenters/dc1.yaml
+    - ./datacenters/vendor.yaml

@@ -1,0 +1,104 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: prod-raccoon
+  description: Raccoon Product Team
+spec:
+  type: business-unit
+  profile:
+    displayName: Raccoon Product Team
+    email: prod-raccoon@example.com
+    picture: https://avatars.dicebear.com/api/identicon/prod-raccoon@example.com.svg?background=%23fff&margin=2
+  parent: team-raccoon
+  children: [prod-raccoon-ent, prod-raccoon-oss]
+  members: [nancy, thomas, mark, steph, joel, beth, melissa]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: prod-raccoon-ent
+  description: Raccoon Enterprise Product Team
+spec:
+  type: department
+  profile:
+    displayName: Raccoon Enterprise
+    email: prod-raccoon-ent@example.com
+    picture: https://avatars.dicebear.com/api/identicon/prod-raccoon-ent@example.com.svg?background=%23fff&margin=2
+  parent: prod-raccoon
+  children: []
+  members: [nancy]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: prod-raccoon-oss
+  description: Raccoon Open Source Product Team
+spec:
+  type: department
+  profile:
+    displayName: Raccoon OSS
+    email: prod-raccoon-oss@example.com
+    picture: https://avatars.dicebear.com/api/identicon/prod-raccoon-oss@example.com.svg?background=%23fff&margin=2
+  parent: prod-raccoon
+  children: []
+  members: [mark]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: nancy
+spec:
+  primaryEmail: nancy@example.com
+  profile:
+    displayName: Nancy
+    displayEmail: nancy@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/nancy@example.com.svg?background=%23fff&topChance=100&top[]=frida
+  memberOf: [prod-raccoon, prod-raccoon-ent]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: thomas
+spec:
+  primaryEmail: thomas@example.com
+  profile:
+    displayName: Thomas
+    displayEmail: thomas@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/thomas@example.com.svg?background=%23fff&topChance=100&top[]=shortFlat
+  memberOf: [prod-raccoon, eng-raccoon]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: mark
+spec:
+  primaryEmail: mark@example.com
+  profile:
+    displayName: Mark
+    displayEmail: mark@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/mark@example.com.svg?background=%23fff&top[]=shortFlat
+  memberOf: [prod-raccoon, prod-raccoon-oss]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: steph
+spec:
+  primaryEmail: steph@example.com
+  profile:
+    displayName: Steph
+    displayEmail: steph@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/steph@example.com.svg?background=%23fff&facialHairChance=0
+  memberOf: [prod-raccoon]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: joel
+spec:
+  primaryEmail: joel@example.com
+  profile:
+    displayName: Joel
+    displayEmail: joel@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/joel@example.com.svg?background=%23fff
+  memberOf: [prod-raccoon, it-ops]

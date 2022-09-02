@@ -1,0 +1,12 @@
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: jira
+  title: Jira
+  description: Project tracking
+spec:
+  type: tool
+  lifecycle: production
+  owner: [it-ops]
+  platform: it-platform
+  uri: https://example.com/jiraaaaaa

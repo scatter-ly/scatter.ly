@@ -1,0 +1,76 @@
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: wholesale-lb
+  description: Blue Sky / Wholesale load balancer
+spec:
+  type: loadbalancer
+  lifecycle: experimental
+  owner: [eng-raccoon-aws]
+  platform: wholesale
+  dependencyOf: ['code-component:wholesale-cli', code-component:wholesale-sdk]
+  isPageable: true
+  oncall1: eng-raccoon-aws
+  oncall2: user:fernando
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: wholesale-db
+  description: Blue Sky / Wholesale database
+spec:
+  type: database
+  lifecycle: production
+  owner: [eng-racoon-aws, it-ops, contract-crow]
+  platform: wholesale
+  dependsOn: ['platform-component:wholesale-lb']
+  dependencyOf: ['code-component:wholesale-cli']
+  datacenter: [aws]
+  isPageable: true
+  oncall1: eng-raccoon-aws
+  oncall2: user:fernando
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: wholesale-secrets
+  description: Blue Sky / Wholesale secrets bucket
+spec:
+  type: s3
+  lifecycle: experimental
+  owner: [eng-raccoon-aws]
+  platform: wholesale
+  datacenter: [aws]
+  dependencyOf:
+    [
+      platform-component:wholesale-lb,
+      platform-component:wholesale-db,
+      code-component:wholesale-cli,
+    ]
+  uri: s3://all-the-secrets
+  priority: 2
+  sla: 24x5
+  isPageable: true
+  oncall1: it-ops
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: wholesale-firewall
+  description: Blue Sky / Wholesale firewall
+spec:
+  type: firewall
+  lifecycle: experimental
+  owner: [user:daniel]
+  platform: wholesale
+  datacenter: [aws]
+  dependencyOf:
+    [
+      platform-component:wholesale-lb,
+      platform-component:wholesale-db,
+      code-component:wholesale-sdk,
+    ]
+  priority: 1
+  sla: 24x5
+  isPageable: true
+  oncall1: user:fernando

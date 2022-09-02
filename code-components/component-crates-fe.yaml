@@ -1,0 +1,18 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: crates-fe
+  description: Crates frontend application
+  title: Crates Frontend
+  tags:
+    - java
+  links:
+    - url: https://example.com/help
+      title: Support
+      icon: help
+spec:
+  type: package
+  owner: [eng-squirrel]
+  platform: crates
+  subcomponentOf: [code-component:crates-erp]
+  uri: https://example.com/order

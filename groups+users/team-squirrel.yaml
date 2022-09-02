@@ -1,0 +1,17 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: team-squirrel
+  description: Squirrel Team
+spec:
+  type: department
+  profile:
+    displayName: Team Squirrel
+    email: oc-org@example.com
+    picture: https://avatars.dicebear.com/api/identicon/team-squirrel@example.com.svg?background=%23fff&margin=2
+    timezone: America/New_York
+    slackHandle: oc
+    pagerHandle: oc
+  parent: oc-inc
+  children: [eng-squirrel, prod-squirrel]
+  members: [alice, brian, jim]

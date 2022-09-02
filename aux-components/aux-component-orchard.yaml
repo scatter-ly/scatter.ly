@@ -1,0 +1,172 @@
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: crates-erp-website
+  title: Crates ERP site
+  description: Crates ERP admin website
+  tags:
+    - java
+spec:
+  type: website
+  lifecycle: production
+  owner: [eng-squirrel]
+  platform: crates
+  uri: https://example.com/admin
+  priority: 1
+  sla: 24x5
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: crates-docs
+  title: Crates docs
+  description: Crates documentation
+  tags:
+    - java
+spec:
+  type: document
+  lifecycle: production
+  owner: [prod-squirrel]
+  platform: crates
+  uri: https://example.com/docs
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: greenhouse-docs
+  title: Greenhouse docs
+  description: Greenhouse project documentation
+spec:
+  type: document
+  lifecycle: production
+  owner: [prod-squirrel]
+  platform: greenhouse
+  uri: https://example.com/moredocs
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: crates-erp-rfc
+  title: ERP Architectural RFC
+  description: Crates ERP Architectural RFC
+  tags:
+    - rfc
+spec:
+  type: document
+  lifecycle: production
+  owner: [prod-squirrel]
+  platform: crates
+  uri: https://www.notion.so/opencontext/Crates-ERP-Architectural-RFC-282de1305a614140ac630fae1601e65e
+  dependsOn: [code-component:crates-erp]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: crates-erp-rules
+  title: ERP Compliance Rules
+  description: Crates ERP Compliance Rules
+  tags:
+    - compliance
+spec:
+  type: document
+  lifecycle: production
+  owner: [eng-squirrel]
+  platform: crates
+  uri: https://www.notion.so/opencontext/Crates-ERP-Compliance-Rules-8ce786dee95142138a883280eefb59a9
+  dependsOn: [code-component:crates-erp]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: crates-erp-security
+  title: ERP Threat Model
+  description: Crates ERP Threat Model
+  tags:
+    - security
+spec:
+  type: document
+  lifecycle: production
+  owner: [eng-squirrel]
+  platform: crates
+  uri: https://www.notion.so/opencontext/Crates-ERP-Threat-Model-cb23445f42ad43a3be217621c3a46148
+  dependsOn: [code-component:crates-erp]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: crates-erp-ownership
+  title: ERP Service Ownership
+  description: Crates ERP Service Ownership documentation
+  tags:
+    - docs
+spec:
+  type: document
+  lifecycle: production
+  owner: [prod-squirrel]
+  platform: crates
+  uri: https://www.notion.so/opencontext/Crates-ERP-Service-Ownership-Doc-6e53655f504e4aeaa74cb18c3e82bc74
+  dependsOn: [code-component:crates-erp]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: retail-app-maintenance
+  title: Retail App Maintenance
+  description: Maintenance documentation
+  tags:
+    - docs
+spec:
+  type: document
+  lifecycle: production
+  owner: [eng-squirrel]
+  platform: retail
+  uri: https://www.notion.so/opencontext/Retail-App-Maintenance-49a977c54d074d1aae70eea154a1680e
+  dependsOn: [code-component:retail-app]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: retail-app-threat-model
+  title: Retail App Threat Model
+  description: Threat Model documentation
+  tags:
+    - security
+spec:
+  type: document
+  lifecycle: production
+  owner: [eng-squirrel]
+  platform: retail
+  uri: https://www.notion.so/opencontext/Retail-App-Threat-Model-a02f5c6c4ee24400a94bf8953e420387
+  dependsOn: [code-component:retail-app]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: retail-app-migration-plan
+  title: Retail App Migration Plan
+  description: Migration Plan documentation
+  tags:
+    - planning
+spec:
+  type: document
+  lifecycle: production
+  owner: [prod-squirrel]
+  platform: retail
+  uri: https://www.notion.so/opencontext/Retail-App-Migration-Plan-300557d741b34c6d87993f1c31e7130a
+  dependsOn: [code-component:retail-app]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: retail-app-ownership
+  title: Retail App Service Ownership
+  description: Service Ownership documentation
+  tags:
+    - docs
+spec:
+  type: document
+  lifecycle: production
+  owner: [prod-squirrel]
+  platform: retail
+  uri: https://www.notion.so/opencontext/Retail-App-Service-Ownership-Doc-6361695aea6f443ab78ad49926258f21
+  dependsOn: [code-component:retail-app]

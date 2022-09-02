@@ -1,0 +1,63 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: oc-inc
+  description: The OpenContext organization
+  links:
+    - url: https://www.opencontext.com/
+      title: Website
+    - url: https://meta.wikimedia.org/wiki/
+      title: Intranet
+spec:
+  type: organization
+  profile:
+    displayName: OpenContext Inc.
+    email: info@opencontext.com
+    picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
+  children: [engineering, product, oc-org]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: engineering
+  description: Engineering Team
+spec:
+  type: virt-org
+  profile:
+    displayName: Engineering Team
+    email: engineering@example.com
+    picture: https://avatars.dicebear.com/api/identicon/engineering@example.com.svg?background=%23fff&margin=2
+  parent: oc-inc
+  children:
+    [eng-squirrel, eng-raccoon, reviewers, docs-core, dev-core, maintainers]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: product
+  description: Product team
+spec:
+  type: virt-org
+  profile:
+    displayName: Product Team
+    email: product@example.com
+    picture: https://avatars.dicebear.com/api/identicon/product@example.com.svg?background=%23fff&margin=2
+  parent: oc-inc
+  children: [prod-squirrel, prod-raccoon]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Location
+metadata:
+  name: oc-groups
+  description: A collection of all OpenContext Groups
+spec:
+  targets:
+    - ./org-oc.yaml
+    - ./org-crow.yaml
+    - ./team-squirrel.yaml
+    - ./team-raccoon.yaml
+    - ./team-it-ops.yaml
+    - ./eng-squirrel.yaml
+    - ./eng-raccoon.yaml
+    - ./prod-squirrel.yaml
+    - ./prod-raccoon.yaml

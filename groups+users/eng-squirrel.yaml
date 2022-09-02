@@ -1,0 +1,138 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: eng-squirrel
+  description: Squirrel Engineering Team
+spec:
+  type: department
+  profile:
+    displayName: Squirrel Engineering
+    email: squirrel-eng@example.com
+    picture: https://avatars.dicebear.com/api/identicon/squirrel-eng@example.com.svg?background=%23fff&margin=25
+    timezone: Europe/London
+    slackHandle: squirrel-eng
+    pagerHandle: squirrel-eng
+  parent: team-squirrel
+  children: [eng-squirrel-mob, eng-squirrel-data, eng-squirrel-qa]
+  members: [bill, martha, reshma, george, sean, alice, jim]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: eng-squirrel-mob
+  description: Squirrel Mobile Team
+spec:
+  type: department
+  profile:
+    displayName: Squirrel Mobile Engineering
+    email: squirrel-mob@example.com
+    picture: https://avatars.dicebear.com/api/identicon/squirrel-mob@example.com.svg?background=%23fff&margin=25
+    timezone: Europe/London
+    slackHandle: squirrel-mob
+    pagerHandle: squirrel-mob
+  parent: eng-squirrel
+  children: []
+  members: [bill, martha]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: eng-squirrel-data
+  description: Squirrel Data Team
+spec:
+  type: department
+  profile:
+    displayName: Squirrel Data Engineering
+    email: squirrel-data@example.com
+    picture: https://avatars.dicebear.com/api/identicon/squirrel-data@example.com.svg?background=%23fff&margin=25
+    timezone: Europe/London
+    slackHandle: squirrel-data
+    pagerHandle: squirrel-data
+  parent: eng-squirrel
+  children: []
+  members: [reshma, george]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: eng-squirrel-qa
+  description: Squirrel QA Team
+spec:
+  type: department
+  profile:
+    displayName: Squirrel QA
+    email: squirrel-qa@example.com
+    picture: https://avatars.dicebear.com/api/identicon/squirrel-qa@example.com.svg?background=%23fff&margin=25
+    timezone: Europe/London
+    slackHandle: squirrel-qa
+    pagerHandle: squirrel-qa
+  parent: eng-squirrel
+  children: []
+  members: [sean]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: bill
+spec:
+  primaryEmail: bill@example.com
+  profile:
+    displayName: Bill
+    displayEmail: bill@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/bill@example.com.svg?background=%23fff
+  memberOf: [eng-squirrel, eng-squirrel-mob]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: martha
+spec:
+  primaryEmail: martha@example.com
+  profile:
+    displayName: Martha
+    displayEmail: martha@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/martha@example.com.svg?background=%23fff
+  memberOf: [eng-squirrel, eng-squirrel-mob]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: reshma
+spec:
+  primaryEmail: reshma@example.com
+  profile:
+    displayName: Reshma
+    displayEmail: reshma@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/reshma@example.com.svg?background=%23fff
+  memberOf: [eng-squirrel, eng-squirrel-data]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: george
+spec:
+  primaryEmail: george@example.com,
+  profile:
+    displayName: George
+    displayEmail: george@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/george@example.com.svg?background=%23fff&topChance=100&eyes=default&mouth=default&top[]=shortRound
+    role: Manager
+    timezone: Africa/Cairo
+    slackHandle: george
+  memberOf: [eng-squirrel, eng-squirrel-data]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: User
+metadata:
+  name: sean
+spec:
+  primaryEmail: sean@example.com
+  profile:
+    displayName: Sean
+    displayEmail: sean@example.com
+    picture: https://avatars.dicebear.com/api/avataaars/sean@example.com.svg?background=%23fff
+    role: Engineer
+    timezone: Africa/Cairo
+    slackHandle: sean
+    pagerHandle: sean
+  memberOf: [eng-squirrel, eng-squirrel-qa]

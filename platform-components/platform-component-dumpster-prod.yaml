@@ -1,0 +1,146 @@
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: dumpster-vm
+  description: Dumpster virtual machine
+spec:
+  type: vm
+  lifecycle: production
+  owner: [it-ops]
+  platform: retail
+  datacenter: [aws, gcp]
+  dependsOn:
+    [
+      'platform-component:dumpster-lb',
+      'platform-component:dumpster-secrets',
+      'platform-component:dumpster-config',
+    ]
+  dependencyOf: ['code-component:dumpster-ui']
+  priority: 1
+  sla: 24x7
+  isPageable: true
+  oncall1: eng-raccoon-aws
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: dumpster-cloud-dns
+  description: Dumpster cloud DNS
+spec:
+  type: dns
+  lifecycle: production
+  owner: [eng-raccoon]
+  platform: retail
+  datacenter: [aws]
+  dependsOn: [platform-component:wholesale-firewall]
+  dependencyOf:
+    [
+      'code-component:dumpster-ui',
+      'platform-component:dumpster-lb',
+      'platform-component:dumpster-secrets',
+    ]
+  priority: 1
+  sla: 24x7
+  isPageable: true
+  oncall1: eng-raccoon-cloud
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: dumpster-noncloud-dns
+  description: Dumpster non-cloud DNS
+spec:
+  type: dns
+  lifecycle: production
+  owner: [eng-raccoon-cloud]
+  platform: retail
+  datacenter: [vendor]
+  dependsOn: [platform-component:dumpster-db]
+  dependencyOf:
+    [
+      'code-component:dumpster-ui',
+      'platform-component:dumpster-lb',
+      'platform-component:dumpster-secrets',
+    ]
+  priority: 1
+  sla: 24x5
+  isPageable: true
+  oncall1: eng-raccoon-onprem
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: dumpster-db
+  description: Dumpster primary data store
+spec:
+  type: database
+  lifecycle: production
+  owner: [user:daniel]
+  platform: dumpster-prod
+  datacenter: [aws]
+  dependencyOf: [code-component:dumpster-data]
+  priority: 1
+  sla: 12x7
+  isPageable: true
+  oncall1: it-ops
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: dumpster-db-vend
+  description: Dumpster vendor data store
+  links:
+    - url: https://example.com/vendor-docs
+      title: Docs
+      icon: docs
+spec:
+  type: database
+  lifecycle: production
+  owner: [user:daniel]
+  platform: dumpster-prod
+  datacenter: [aws]
+  dependencyOf: [code-component:dumpster-data, platform-component:dumpster-db]
+  priority: 1
+  sla: 12x7
+  isPageable: true
+  oncall1: it-ops
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: dumpster-config
+  description: Dumpster config bucket
+spec:
+  type: gcs
+  lifecycle: production
+  owner: [eng-raccoon-cloud]
+  platform: crates
+  datacenter: [gcp]
+  dependencyOf: [platform-component:dumpster-db, code-component:dumpster-ui]
+  priority: 2
+  sla: 24x5
+  isPageable: true
+  oncall1: user:jax
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: dumpster-secrets
+  description: Dumpster secrets bucket
+spec:
+  type: s3
+  lifecycle: production
+  owner: [eng-raccoon]
+  platform: dumpster-prod
+  datacenter: [aws]
+  dependencyOf:
+    [
+      platform-component:dumpster-db,
+      code-component:dumpster-ui,
+      platform-component:retail-vm,
+    ]
+  uri: s3://crates-config
+  priority: 3
+  sla: 24x5
+  isPageable: true
+  oncall1: eng-raccoon-eco

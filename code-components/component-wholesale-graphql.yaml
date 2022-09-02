@@ -1,0 +1,12 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: wholesale-graphql
+  description: Blue Sky SDK using graphql
+  title: Blue Sky SDK
+  tags:
+    - graphql
+spec:
+  type: repository
+  owner: [user:fernando]
+  uri: https://github.com/example/blue-sky-sdk

@@ -1,0 +1,12 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Location
+metadata:
+  name: oc-platform-components
+  description: A collection of all OpenContext platform components
+spec:
+  targets:
+    - ./platform-components/platform-component-greenhouse.yaml
+    - ./platform-components/platform-component-crates.yaml
+    - ./platform-components/platform-component-wholesale.yaml
+    - ./platform-components/platform-component-retail.yaml
+    - ./platform-components/platform-component-dumpster-prod.yaml

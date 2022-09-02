@@ -1,0 +1,14 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Group
+metadata:
+  name: it-ops
+  description: IT Operations Team
+spec:
+  type: department
+  profile:
+    displayName: IT Operations
+    email: it-ops@example.com
+    picture: https://avatars.dicebear.com/api/identicon/it-ops@example.com.svg?background=%23fff&margin=25
+  parent: oc-inc
+  children: []
+  members: [joel]

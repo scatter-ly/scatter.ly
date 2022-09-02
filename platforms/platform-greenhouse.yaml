@@ -1,0 +1,8 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Platform
+metadata:
+  name: greenhouse
+  description: Greenhouse ops
+spec:
+  owner: [eng-squirrel]
+  scheme: orchard

@@ -1,0 +1,30 @@
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: greenhouse-lb
+  description: Greenhouse load balancer
+spec:
+  type: loadbalancer
+  lifecycle: production
+  owner: [eng-squirrel-data]
+  platform: 'greenhouse'
+  dependencyOf:
+    ['code-component:greenhouse-mobile', code-component:greenhouse-data]
+  isPageable: true
+  oncall1: eng-squirrel-mob
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: greenhouse-db
+  description: Greenhouse database
+spec:
+  type: database
+  lifecycle: production
+  owner: [eng-squirrel-data]
+  platform: 'greenhouse'
+  dependsOn: ['platform-component:greenhouse-lb']
+  dependencyOf: ['code-component:greenhouse-data']
+  datacenter: [aws]
+  isPageable: true
+  oncall1: eng-data

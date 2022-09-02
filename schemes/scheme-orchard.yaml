@@ -1,0 +1,13 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Scheme
+metadata:
+  name: orchard
+  description: Everything related to the squirrel orchard project
+  links:
+    - url: https://orchard.example.com
+      title: Orchard here
+    - url: http://example.com/schemes/orchard/dashboard
+      title: Orchard Metrics Dashboard
+      icon: dashboard
+spec:
+  owner: [team-squirrel]

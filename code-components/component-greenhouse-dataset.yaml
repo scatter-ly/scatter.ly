@@ -1,0 +1,14 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: greenhouse-dataset
+  description: Greenhouse historical data
+  title: Greenhouse data archive
+spec:
+  type: other
+  otherType: dataset
+  owner: [prod-squirrel]
+  platform: greenhouse
+  uri: s3://greenhouse-dataset
+  dependsOn: [code-component:greenhouse-data]
+  datacenter: [aws]

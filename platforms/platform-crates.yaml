@@ -1,0 +1,8 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Platform
+metadata:
+  name: crates
+  description: Shipping & receiving platform
+spec:
+  owner: [eng-squirrel, prod-squirrel]
+  scheme: orchard

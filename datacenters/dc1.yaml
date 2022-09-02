@@ -1,0 +1,13 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Datacenter
+metadata:
+  name: dc1
+  title: Datacenter 1
+  description: Datacenter 1
+spec:
+  type: other
+  otherType: dc1
+  owner: [it-team]
+  region: us-east
+  isPageable: true
+  oncall1: it-team

@@ -1,0 +1,17 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Location
+metadata:
+  name: oc-inc
+  description: A collection of all OpenContext example Groups
+  links:
+    - title: OpenContext Website
+      url: https://opencontext.com
+    - title: Discord
+      url: https://discord.gg/nF8e6gqZwX
+      icon: forum
+    - title: GitHub Issues
+      url: https://$github.com/opencontextinc/opencontext/issues
+      icon: github
+spec:
+  targets:
+    - ./groups+users/org.yaml

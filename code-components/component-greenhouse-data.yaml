@@ -1,0 +1,15 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: greenhouse-data
+  description: Greenhouse data platform
+  title: Greenhouse data backend
+  tags:
+    - csv
+    - nosql
+    - graphql
+spec:
+  type: repository
+  owner: [eng-squirrel-data, prod-squirrel-data]
+  platform: greenhouse
+  uri: https://github.com/example/greenhouse-data

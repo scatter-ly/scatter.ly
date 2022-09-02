@@ -1,0 +1,11 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Location
+metadata:
+  name: oc-aux-components
+  description: A collection of all OpenContext aux components
+spec:
+  targets:
+    - ./aux-components/aux-component-orchard.yaml
+    - ./aux-components/aux-component-blue-sky.yaml
+    - ./aux-components/aux-component-dumpster.yaml
+    - ./aux-components/aux-component-it-ops.yaml

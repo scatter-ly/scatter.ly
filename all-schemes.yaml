@@ -1,0 +1,10 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Location
+metadata:
+  name: oc-schemes
+  description: A collection of all OpenContext Schemes
+spec:
+  targets:
+    - ./schemes/scheme-orchard.yaml
+    - ./schemes/scheme-dumpster.yaml
+    - ./schemes/scheme-blue-sky.yaml

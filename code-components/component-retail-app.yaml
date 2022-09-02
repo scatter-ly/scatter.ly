@@ -1,0 +1,38 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: retail-app
+  description: Blue Sky / Retail web app
+  title: Retail app
+  tags:
+    - react
+    - typescript
+  links:
+    - url: https://example.com/help
+      title: Support
+      icon: help
+spec:
+  type: repository
+  owner: [prod-raccoon-oss, eng-raccoon-cloud]
+  dependsOn: [code-component:wholesale-graphql]
+  uri: https://example.com/retail-app
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: retail-backend
+  description: Blue Sky / Retail app backend
+  title: Retail backend
+  tags:
+    - graphql
+    - typescript
+  links:
+    - url: https://example.com/help
+      title: Support
+      icon: help
+spec:
+  type: repository
+  owner: [user:daniel]
+  dependsOn: [code-component:wholesale-graphql]
+  subcomponentOf: [code-component:retail-app]
+  uri: https://example.com/retail-backend

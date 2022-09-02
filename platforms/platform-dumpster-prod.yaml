@@ -1,0 +1,8 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Platform
+metadata:
+  name: dumpster-prod
+  description: Dumpster mapping product line
+spec:
+  owner: [eng-raccoon, prod-raccoon]
+  scheme: dumpster

@@ -1,0 +1,43 @@
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: retail-vm
+  description: Blue Sky / Retail virtual machine
+spec:
+  type: vm
+  lifecycle: production
+  owner: [it-ops]
+  platform: retail
+  datacenter: [aws, gcp]
+  dependsOn:
+    ['platform-component:wholesale-lb', 'platform-component:wholesale-secrets']
+  dependencyOf: ['code-component:retail-app', 'code-component:retail-backend']
+  priority: 1
+  sla: 24x7
+  isPageable: true
+  oncall1: user:daniel
+  oncall2: user:fernando
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: retail-dns
+  description: Blue Sky / Retail DNS
+spec:
+  type: dns
+  lifecycle: production
+  owner: [it-ops]
+  platform: retail
+  datacenter: [gcp]
+  dependencyOf:
+    [
+      'code-component:retail-app',
+      'code-component:retail-backend',
+      'platform-component:wholesale-lb',
+      'platform-component:wholesale-secrets',
+    ]
+  priority: 1
+  sla: 24x7
+  isPageable: true
+  oncall1: eng-raccoon-eco
+  oncall2: eng-raccoon-cloud

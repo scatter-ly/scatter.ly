@@ -1,0 +1,17 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Location
+metadata:
+  name: oc-code-components
+  description: A collection of all OpenContext code components
+spec:
+  targets:
+    - ./code-components/component-greenhouse-mob.yaml
+    - ./code-components/component-greenhouse-data.yaml
+    - ./code-components/component-greenhouse-dataset.yaml
+    - ./code-components/component-crates-erp.yaml
+    - ./code-components/component-crates-fe.yaml
+    - ./code-components/component-wholesale-graphql.yaml
+    - ./code-components/component-wholesale-cli.yaml
+    - ./code-components/component-retail-app.yaml
+    - ./code-components/component-dumpster-data.yaml
+    - ./code-components/component-dumpster-ui.yaml

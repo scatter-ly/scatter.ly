@@ -1,0 +1,12 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Datacenter
+metadata:
+  name: vendor
+  title: Vendor 1
+  description: Vendor 1's Datacenter
+spec:
+  type: other
+  otherType: vendor
+  owner: [it-team]
+  region: us-east
+  isPageable: false

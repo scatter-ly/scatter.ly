@@ -1,0 +1,25 @@
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: blue-sky-docs
+  title: Blue Sky docs
+  description: Blue Sky Buffet project documentation
+spec:
+  type: document
+  lifecycle: planning
+  owner: [prod-raccoon]
+  platform: blue-sky
+  uri: https://example.com/docsdocs
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: blue-sky-proto
+  title: Blue Sky prototype
+  description: Blue Sky Buffet prototype website
+spec:
+  type: website
+  lifecycle: planning
+  owner: [prod-raccoon-ent]
+  platform: blue-sky
+  uri: https://example.com/new-buffet

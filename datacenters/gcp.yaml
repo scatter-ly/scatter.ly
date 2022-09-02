@@ -1,0 +1,12 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Datacenter
+metadata:
+  name: gcp
+  title: GCP
+  description: Google Cloud Platform
+spec:
+  type: cloud
+  owner: [cloud-team]
+  region: us-central1-c
+  isPageable: true
+  oncall1: cloud-team

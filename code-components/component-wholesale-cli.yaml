@@ -1,0 +1,27 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: wholesale-cli
+  description: Blue Sky command line tool
+  title: Blue Sky CLI
+  tags:
+    - cli
+    - typescript
+  links:
+    - url: https://example.com/user
+      title: Examples Users
+      icon: user
+    - url: https://example.com/group
+      title: Example Group
+      icon: group
+    - url: https://example.com/cloud
+      title: Link with Cloud Icon
+      icon: cloud
+    - url: https://example.com/dashboard
+      title: Dashboard
+      icon: dashboard
+spec:
+  type: package
+  owner: [user:fernando]
+  dependsOn: [code-component:wholesale-sdk]
+  uri: https://github.com/example/blue-sky-cli

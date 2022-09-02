@@ -1,0 +1,7 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Platform
+metadata:
+  name: it-platform
+  description: IT operations
+spec:
+  owner: [it-ops]

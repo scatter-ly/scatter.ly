@@ -1,0 +1,60 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: dumpster-data
+  description: Dumpster data backend
+  title: Dumpster data
+  tags:
+    - csv
+    - nosql
+    - graphql
+spec:
+  type: repository
+  owner: [eng-raccoon-aws, eng-raccoon-eco]
+  uri: https://github.com/example/greenhouse-data
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: log4j
+  description: Log4j library
+  title: Log4j
+  tags:
+    - logging
+spec:
+  type: library
+  owner: [eng-raccoon-aws, eng-raccoon-eco]
+  platform: dumpster-prod
+  uri: https://github.com/example/greenhouse-data
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: log4j-ownership
+  title: Log4j Service Ownership
+  description: Log4j Service Ownership docs
+  tags:
+    - docs
+spec:
+  type: document
+  owner: [eng-raccoon-aws, eng-raccoon-eco]
+  platform: dumpster-prod
+  lifecycle: production
+  uri: https://www.notion.so/opencontext/Log4j-Service-Ownership-Doc-a82c3a7db8674b9f97269435017be55b
+  dependsOn: [code-component:log4j]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: log4j-remediation
+  title: Log4j Remediation Plan
+  description: Log4j Remediation Plan docs
+  tags:
+    - docs
+spec:
+  type: document
+  owner: [eng-raccoon-aws, eng-raccoon-eco]
+  platform: dumpster-prod
+  lifecycle: production
+  uri: https://www.notion.so/opencontext/Log4j-Remediation-Plan-97618712d5c344138c2c92d50911f783
+  dependsOn: [code-component:log4j]

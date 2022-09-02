@@ -1,0 +1,13 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Scheme
+metadata:
+  name: blue-sky
+  description: Everything related to the raccoon Blue Sky Buffet project
+  links:
+    - url: https://buffet.example.com
+      title: Project diagrams
+    - url: http://example.com/schemes/orchard/dashboard
+      title: Buffet Metrics Dashboard
+      icon: dashboard
+spec:
+  owner: [team-raccoon]

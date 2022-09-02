@@ -1,0 +1,54 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: dumpster-ui
+  description: Dumpster frontend monorepo
+  title: Dumpster UI
+  tags:
+    - python
+  links:
+    - url: https://example.com/help
+      title: Support
+      icon: help
+spec:
+  type: repository
+  owner: [eng-raccoon-onprem, eng-raccoon-cloud, prod-raccoon-ent]
+  dependsOn: [aux-component:map-thingy]
+  uri: https://example.com/map
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: dumpster-map
+  description: Dumpster map components
+  title: Dumpster map
+  tags:
+    - python
+  links:
+    - url: https://example.com/maps
+      title: Live map
+      icon: website
+spec:
+  type: package
+  owner: [eng-raccoon-onprem, eng-raccoon-cloud]
+  subcomponentOf: [code-component:dumpster-ui]
+  uri: https://example.com/map-tools
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponent
+metadata:
+  name: d3
+  description: D3 library
+  title: D3
+  tags:
+    - javascript
+    - graphs
+  links:
+    - url: https://example.com/examples
+      title: Examples
+      icon: website
+spec:
+  type: package
+  owner: [eng-raccoon-onprem, eng-raccoon-cloud]
+  subcomponentOf: [code-component:dumpster-ui]
+  uri: https://example.com/map-tools

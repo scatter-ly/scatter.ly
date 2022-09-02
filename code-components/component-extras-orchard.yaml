@@ -1,0 +1,61 @@
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponentSidecar
+metadata:
+  name: crates-erp-extras
+spec:
+  codecomponent: crates-erp
+  platform: crates
+  lifecycle: production
+  priority: 1
+  sla: 24x7
+  isPageable: true
+  oncall1: user:sean
+  oncall2: user:reshma
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponentSidecar
+metadata:
+  name: crates-fe-extras
+spec:
+  codecomponent: crates-fe
+  platform: crates
+  lifecycle: production
+  priority: 1
+  sla: 24x7
+  isPageable: true
+  oncall1: eng-squirrel-mob
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponentSidecar
+metadata:
+  name: greenhouse-data-extras
+spec:
+  codecomponent: greenhouse-data
+  platform: greenhouse
+  lifecycle: production
+  isPageable: false
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponentSidecar
+metadata:
+  name: greenhouse-dataset-extras
+spec:
+  codecomponent: greenhouse-dataset
+  platform: greenhouse
+  lifecycle: experimental
+  datacenter: [aws]
+  isPageable: false
+---
+apiVersion: opencontext.com/v1alpha1
+kind: CodeComponentSidecar
+metadata:
+  name: greenhouse-mobile-extras
+spec:
+  codecomponent: greenhouse-mobile
+  platform: greenhouse
+  lifecycle: production
+  priority: 1
+  sla: 24x7
+  isPageable: true
+  oncall1: user:martha
+  oncall2: user:bill
