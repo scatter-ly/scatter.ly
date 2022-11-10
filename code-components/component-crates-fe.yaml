@@ -3,9 +3,12 @@ kind: CodeComponent
 metadata:
   name: crates-fe
   description: Crates frontend application
+  annotations:
+    github.com/project-slug: 'opencontextinc/crates-frontend'
   title: Crates Frontend
   tags:
-    - java
+    - javascript
+    - typescript
   links:
     - url: https://example.com/help
       title: Support
