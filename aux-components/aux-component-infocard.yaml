@@ -1,0 +1,35 @@
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: dev-core-info
+  title: Dev Core Info
+  description: Slack and links for Dev Core
+  links:
+    - url: https://slack.com
+      title: Slack
+      icon: chat
+    - url: https://jira.com
+      title: Jira
+      icon: dashboard
+spec:
+  type: infocard
+  lifecycle: production
+  owner: [dev-core]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: eng-raccoon-info
+  title: Eng Raccoon Info
+  description: Additional links for Eng Raccoon
+  links:
+    - url: https://slack.com
+      title: Slack
+      icon: chat
+    - url: https://jira.com
+      title: Jira
+      icon: dashboard
+spec:
+  type: infocard
+  lifecycle: production
+  owner: [eng-raccoon]

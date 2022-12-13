@@ -9,3 +9,4 @@ spec:
     - ./aux-components/aux-component-blue-sky.yaml
     - ./aux-components/aux-component-dumpster.yaml
     - ./aux-components/aux-component-it-ops.yaml
+    - ./aux-components/aux-component-infocard.yaml

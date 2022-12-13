@@ -3,6 +3,10 @@ kind: Group
 metadata:
   name: eng-raccoon
   description: Raccoon Engineering Team
+  links:
+    - url: https://google.com
+      title: Team Handbook
+      icon: document
 spec:
   type: department
   profile:
