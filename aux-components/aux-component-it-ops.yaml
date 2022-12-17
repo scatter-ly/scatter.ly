@@ -10,3 +10,15 @@ spec:
   owner: [it-ops]
   platform: it-platform
   uri: https://example.com/jiraaaaaa
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: servicedesk
+  title: servicedesk
+  description: IT Service Desk
+spec:
+  type: tool
+  lifecycle: production
+  owner: [it-ops]
+  uri: https://example.com/servicedesk

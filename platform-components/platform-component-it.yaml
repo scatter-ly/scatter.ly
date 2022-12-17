@@ -1,0 +1,31 @@
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: jira-server
+  description: JIRA server
+spec:
+  type: server
+  lifecycle: production
+  owner: [it-ops]
+  datacenter: [dc1]
+  dependencyOf: [aux-component:jira]
+  priority: 2
+  sla: 24x7
+  isPageable: true
+  oncall1: it-ops
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: servicedesk-server
+  description: Service desk server
+spec:
+  type: server
+  lifecycle: production
+  owner: [it-ops]
+  datacenter: [dc1]
+  dependencyOf: [aux-component:servicedesk]
+  priority: 1
+  sla: 24x7
+  isPageable: true
+  oncall1: it-ops

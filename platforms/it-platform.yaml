@@ -5,3 +5,4 @@ metadata:
   description: IT operations
 spec:
   owner: [it-ops]
+  hasComponent: [aux-component:servicedesk, platform-component:jira-server, platform-component:servicedesk-server, code-component:scatter.ly]

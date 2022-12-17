@@ -23,6 +23,8 @@ kind: PlatformComponent
 metadata:
   name: retail-dns
   description: Blue Sky / Retail DNS
+  annotations:
+    pagerduty.com/service-id: 'PJN77XW'
 spec:
   type: dns
   lifecycle: production

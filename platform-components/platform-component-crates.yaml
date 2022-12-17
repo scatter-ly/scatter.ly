@@ -33,3 +33,20 @@ spec:
   sla: 24x5
   isPageable: true
   oncall1: eng-squirrel
+---
+apiVersion: opencontext.com/v1alpha1
+kind: PlatformComponent
+metadata:
+  name: crates-ssl
+  description: Crates SSL
+spec:
+  type: ssl certificate
+  lifecycle: production
+  owner: [eng-squirrel]
+  platform: crates
+  datacenter: [aws]
+  dependencyOf: [platform-component:crates-db, code-component:crates-erp]
+  priority: 3
+  sla: 24x5
+  isPageable: true
+  oncall1: eng-squirrel

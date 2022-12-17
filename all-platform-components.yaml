@@ -10,3 +10,4 @@ spec:
     - ./platform-components/platform-component-wholesale.yaml
     - ./platform-components/platform-component-retail.yaml
     - ./platform-components/platform-component-dumpster-prod.yaml
+    - ./platform-components/platform-component-it.yaml
