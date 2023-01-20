@@ -1,5 +1,5 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: eng-raccoon
   description: Raccoon Engineering Team
@@ -18,7 +18,7 @@ spec:
   members: [jax, fernando, daniel, brit, billy, josh, audrey]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: eng-raccoon-cloud
   description: Raccoon Cloud
@@ -33,7 +33,7 @@ spec:
   members: [jax, fernando, paul]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: eng-raccoon-aws
   description: Raccoon AWS Team
@@ -48,7 +48,7 @@ spec:
   members: [fernando, daniel]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: eng-raccoon-onprem
   description: Raccoon OnPrem Team
@@ -63,7 +63,7 @@ spec:
   members: [daniel, brit, billy]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: eng-raccoon-eco
   description: Raccoon Ecosystem Team
@@ -78,11 +78,10 @@ spec:
   members: [daniel, josh, michael]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: jax
 spec:
-  primaryEmail: jax@example.com
   profile:
     displayName: Jax
     displayEmail: jax@example.com
@@ -90,11 +89,10 @@ spec:
   memberOf: [eng-raccoon, eng-raccoon-cloud]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: fernando
 spec:
-  primaryEmail: fernando@example.com
   profile:
     displayName: Fernando
     displayEmail: fernando@example.com
@@ -103,7 +101,7 @@ spec:
   memberOf: [eng-raccoon, eng-raccoon-cloud, eng-raccoon-aws]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: daniel
 spec:
@@ -116,11 +114,10 @@ spec:
   memberOf: [eng-raccoon, eng-raccoon-aws, eng-raccoon-onprem, eng-raccoon-eco]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: brit
 spec:
-  primaryEmail: brit@example.com
   profile:
     displayName: Brit
     displayEmail: brit@example.com
@@ -129,11 +126,10 @@ spec:
   memberOf: [eng-raccoon, eng-raccoon-onprem]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: billy
 spec:
-  primaryEmail: billy@example.com
   profile:
     displayName: billy
     displayEmail: billy@example.com
@@ -141,11 +137,10 @@ spec:
   memberOf: [eng-raccoon, eng-raccoon-onprem]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: josh
 spec:
-  primaryEmail: josh@example.com
   profile:
     displayName: Josh
     displayEmail: josh@example.com

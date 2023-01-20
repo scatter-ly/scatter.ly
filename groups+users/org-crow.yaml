@@ -1,5 +1,5 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: contract-crow
   description: Crow Contractors
@@ -17,11 +17,10 @@ spec:
   members: [paul, michael]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: paul
 spec:
-  primaryEmail: paul@example.com
   profile:
     displayName: Paul
     displayEmail: paul@example.com
@@ -32,11 +31,10 @@ spec:
   memberOf: [contract-crow, eng-raccoon-cloud]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: michael
 spec:
-  primaryEmail: michael@example.com
   profile:
     displayName: Michael
     displayEmail: michael@example.com

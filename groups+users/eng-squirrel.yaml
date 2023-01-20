@@ -1,5 +1,5 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: eng-squirrel
   description: Squirrel Engineering Team
@@ -17,7 +17,7 @@ spec:
   members: [bill, martha, reshma, george, sean, alice, jim]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: eng-squirrel-mob
   description: Squirrel Mobile Team
@@ -35,7 +35,7 @@ spec:
   members: [bill, martha]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: eng-squirrel-data
   description: Squirrel Data Team
@@ -53,7 +53,7 @@ spec:
   members: [reshma, george]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: eng-squirrel-qa
   description: Squirrel QA Team
@@ -71,11 +71,10 @@ spec:
   members: [sean]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: bill
 spec:
-  primaryEmail: bill@example.com
   profile:
     displayName: Bill
     displayEmail: bill@example.com
@@ -83,11 +82,10 @@ spec:
   memberOf: [eng-squirrel, eng-squirrel-mob]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: martha
 spec:
-  primaryEmail: martha@example.com
   profile:
     displayName: Martha
     displayEmail: martha@example.com
@@ -95,11 +93,10 @@ spec:
   memberOf: [eng-squirrel, eng-squirrel-mob]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: reshma
 spec:
-  primaryEmail: reshma@example.com
   profile:
     displayName: Reshma
     displayEmail: reshma@example.com
@@ -107,11 +104,10 @@ spec:
   memberOf: [eng-squirrel, eng-squirrel-data]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: george
 spec:
-  primaryEmail: george@example.com,
   profile:
     displayName: George
     displayEmail: george@example.com
@@ -122,11 +118,10 @@ spec:
   memberOf: [eng-squirrel, eng-squirrel-data]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: sean
 spec:
-  primaryEmail: sean@example.com
   profile:
     displayName: Sean
     displayEmail: sean@example.com
