@@ -1,5 +1,5 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: it-ops
   description: IT Operations Team

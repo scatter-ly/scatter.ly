@@ -1,5 +1,5 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: prod-raccoon
   description: Raccoon Product Team
@@ -14,7 +14,7 @@ spec:
   members: [nancy, thomas, mark, steph, joel, beth, melissa]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: prod-raccoon-ent
   description: Raccoon Enterprise Product Team
@@ -29,7 +29,7 @@ spec:
   members: [nancy]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: prod-raccoon-oss
   description: Raccoon Open Source Product Team
@@ -44,11 +44,10 @@ spec:
   members: [mark]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: nancy
 spec:
-  primaryEmail: nancy@example.com
   profile:
     displayName: Nancy
     displayEmail: nancy@example.com
@@ -56,11 +55,10 @@ spec:
   memberOf: [prod-raccoon, prod-raccoon-ent]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: thomas
 spec:
-  primaryEmail: thomas@example.com
   profile:
     displayName: Thomas
     displayEmail: thomas@example.com
@@ -68,11 +66,10 @@ spec:
   memberOf: [prod-raccoon, eng-raccoon]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: mark
 spec:
-  primaryEmail: mark@example.com
   profile:
     displayName: Mark
     displayEmail: mark@example.com
@@ -80,11 +77,10 @@ spec:
   memberOf: [prod-raccoon, prod-raccoon-oss]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: steph
 spec:
-  primaryEmail: steph@example.com
   profile:
     displayName: Steph
     displayEmail: steph@example.com
@@ -92,11 +88,10 @@ spec:
   memberOf: [prod-raccoon]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: joel
 spec:
-  primaryEmail: joel@example.com
   profile:
     displayName: Joel
     displayEmail: joel@example.com

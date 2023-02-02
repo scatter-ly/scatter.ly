@@ -1,5 +1,5 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: oc-inc
   description: The OpenContext organization
@@ -17,7 +17,7 @@ spec:
   children: [engineering, product, oc-org]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: engineering
   description: Engineering Team
@@ -32,7 +32,7 @@ spec:
     [eng-squirrel, eng-raccoon, reviewers, docs-core, dev-core, maintainers]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: product
   description: Product team
@@ -49,10 +49,11 @@ apiVersion: opencontext.com/v1alpha1
 kind: Location
 metadata:
   name: oc-groups
-  description: A collection of all OpenContext Groups
+  description: A collection of all OpenContext Teams
 spec:
   targets:
     - ./org-oc.yaml
+    - ./oc-users.yaml
     - ./org-crow.yaml
     - ./team-squirrel.yaml
     - ./team-raccoon.yaml

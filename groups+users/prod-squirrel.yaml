@@ -1,5 +1,5 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: prod-squirrel
   description: Squirrel Product Team
@@ -14,7 +14,7 @@ spec:
   members: [sam, stacie, joe, sophie, brian]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: prod-squirrel-mob
   description: Squirrel Mobile Product Team
@@ -29,7 +29,7 @@ spec:
   members: [sam, stacie]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Group
+kind: Team
 metadata:
   name: prod-squirrel-data
   description: Squirrel Data Product Team
@@ -44,11 +44,10 @@ spec:
   members: [joe, sophie]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: sam
 spec:
-  primaryEmail: sam@example.com
   profile:
     displayName: sam
     displayEmail: sam@example.com
@@ -56,11 +55,10 @@ spec:
   memberOf: [prod-squirrel, prod-squirrel-mob]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: stacie
 spec:
-  primaryEmail: stacie@example.com
   profile:
     displayName: Stacie
     displayEmail: stacie@example.com
@@ -68,11 +66,10 @@ spec:
   memberOf: [prod-squirrel, prod-squirrel-mob]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: joe
 spec:
-  primaryEmail: joe@example.com
   profile:
     displayName: Joe
     displayEmail: joe@example.com
@@ -80,11 +77,10 @@ spec:
   memberOf: [prod-squirrel, prod-squirrel-data]
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: User
+kind: Person
 metadata:
   name: sophie
 spec:
-  primaryEmail: sophie@example.com
   profile:
     displayName: Sophie
     displayEmail: sophie@example.com

@@ -1,102 +1,77 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Team
-metadata:
-  name: oc-org
-  description: OpenContext Employees
-spec:
-  type: department
-  profile:
-    displayName: OpenContext Employees
-    email: oc-org@example.com
-    picture: https://avatars.dicebear.com/api/identicon/oc-org@example.com.svg?background=%23fff&margin=25
-    timezone: Africa/Cairo
-    slackHandle: oc
-    pagerHandle: oc
-  parent: oc-inc
-  children: []
-  members: [alice, audrey, beth, brian, jim, melissa]
----
-apiVersion: opencontext.com/v1alpha1
-kind: Person
+kind: User
 metadata:
   name: audrey
   annotations:
     'github.com/user-login': aeschright
 spec:
-  memberOf: [oc-org, team-raccoon, eng-raccoon]
-  ownedBy: audrey
+  primaryEmail: audrey.eschright@opencontext.com
   profile:
     displayName: Audrey Eschright
     displayEmail: audrey.eschright@opencontext.com
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Person
+kind: User
 metadata:
   name: alice
   annotations:
     'github.com/user-login': alchen99
 spec:
-  memberOf: [oc-org, team-squirrel, eng-squirrel]
-  ownedBy: alice
+  primaryEmail: alice.chen@opencontext.com
   profile:
     displayName: Alice Chen
     displayEmail: alice.chen@opencontext.com
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Person
+kind: User
 metadata:
   name: beth
   annotations:
     'github.com/user-login': bcornils
 spec:
-  memberOf: [oc-org, team-raccoon, prod-raccoon]
-  ownedBy: beth
+  primaryEmail: beth.fuller@opencontext.com
   profile:
     displayName: Beth Fuller
     displayEmail: beth.fuller@opencontext.com
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Person
+kind: User
 metadata:
   name: brian
 spec:
-  memberOf: [oc-org, team-squirrel, prod-squirrel]
-  ownedBy: brian
+  primaryEmail: brian.walter@opencontext.com
   profile:
     displayName: Brian Walter
     displayEmail: brian.walter@opencontext.com
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Person
+kind: User
 metadata:
   name: jim
   annotations:
     'github.com/user-login': jwithington
 spec:
-  memberOf: [oc-org, team-squirrel, eng-squirrel]
-  ownedBy: jim
+  primaryEmail: jim.withington@opencontext.com
   profile:
     displayName: Jim Withington
     displayEmail: jim.withington@opencontext.com
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Person
+kind: User
 metadata:
   name: melissa
 spec:
-  memberOf: [oc-org, team-raccoon, prod-raccoon]
-  ownedBy: melissa
+  primaryEmail: melissa.hollis@opencontext.com
   profile:
     displayName: Melissa Hollis
     displayEmail: melissa.hollis@opencontext.com
 ---
 apiVersion: opencontext.com/v1alpha1
-kind: Person
+kind: User
 metadata:
   name: chris
 spec:
-  memberOf: [oc-org, team-squirrel, prod-squirrel]
-  ownedBy: chris
+  primaryEmail: chris.schnaidt@opencontext.com
   profile:
     displayName: Chris Schnaidt
     displayEmail: chris.schnaidt@opencontext.com
