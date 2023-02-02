@@ -89,3 +89,14 @@ spec:
   profile:
     displayName: Melissa Hollis
     displayEmail: melissa.hollis@opencontext.com
+---
+apiVersion: opencontext.com/v1alpha1
+ kind: Person
+ metadata:
+   name: chris
+ spec:
+   memberOf: [oc-org, team-squirrel, prod-squirrel]
+   ownedBy: chris
+   profile:
+     displayName: Chris Schnaidt
+     displayEmail: chris.schnaidt@opencontext.com
