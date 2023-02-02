@@ -67,11 +67,11 @@ spec:
     displayEmail: melissa.hollis@opencontext.com
 ---
 apiVersion: opencontext.com/v1alpha1
- kind: User
- metadata:
-   name: chris
- spec:
-   primaryEmail: chris.schnaidt@opencontext.com
-   profile:
-     displayName: Chris Schnaidt
-     displayEmail: chris.schnaidt@opencontext.com
+kind: User
+metadata:
+  name: chris
+spec:
+  primaryEmail: chris.schnaidt@opencontext.com
+  profile:
+    displayName: Chris Schnaidt
+    displayEmail: chris.schnaidt@opencontext.com
