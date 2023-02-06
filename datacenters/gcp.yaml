@@ -8,5 +8,3 @@ spec:
   type: cloud
   owner: [cloud-team]
   region: us-central1-c
-  isPageable: true
-  oncall1: cloud-team

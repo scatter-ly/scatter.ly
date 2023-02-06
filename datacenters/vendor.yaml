@@ -9,4 +9,3 @@ spec:
   otherType: vendor
   owner: [it-team]
   region: us-east
-  isPageable: false

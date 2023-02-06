@@ -11,8 +11,6 @@ spec:
   dependencyOf: [aux-component:jira]
   priority: 2
   sla: 24x7
-  isPageable: true
-  oncall1: it-ops
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: PlatformComponent
@@ -27,5 +25,3 @@ spec:
   dependencyOf: [aux-component:servicedesk]
   priority: 1
   sla: 24x7
-  isPageable: true
-  oncall1: it-ops
