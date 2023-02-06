@@ -32,7 +32,7 @@ metadata:
       icon: help
 spec:
   type: repository
-  owner: [user:daniel]
+  owner: [person:daniel]
   dependsOn: [code-component:wholesale-graphql]
   subcomponentOf: [code-component:retail-app]
   uri: https://example.com/retail-backend

@@ -9,9 +9,6 @@ spec:
   owner: [eng-raccoon-aws]
   platform: wholesale
   dependencyOf: ['code-component:wholesale-cli', code-component:wholesale-sdk]
-  isPageable: true
-  oncall1: eng-raccoon-aws
-  oncall2: user:fernando
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: PlatformComponent
@@ -26,9 +23,6 @@ spec:
   dependsOn: ['platform-component:wholesale-lb']
   dependencyOf: ['code-component:wholesale-cli']
   datacenter: [aws]
-  isPageable: true
-  oncall1: eng-raccoon-aws
-  oncall2: user:fernando
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: PlatformComponent
@@ -50,8 +44,6 @@ spec:
   uri: s3://all-the-secrets
   priority: 2
   sla: 24x5
-  isPageable: true
-  oncall1: it-ops
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: PlatformComponent
@@ -61,7 +53,7 @@ metadata:
 spec:
   type: firewall
   lifecycle: experimental
-  owner: [user:daniel]
+  owner: [person:daniel]
   platform: wholesale
   datacenter: [aws]
   dependencyOf:
@@ -72,5 +64,3 @@ spec:
     ]
   priority: 1
   sla: 24x5
-  isPageable: true
-  oncall1: user:fernando
