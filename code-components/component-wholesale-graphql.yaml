@@ -8,5 +8,5 @@ metadata:
     - graphql
 spec:
   type: repository
-  owner: [user:fernando]
+  owner: [person:fernando]
   uri: https://github.com/example/blue-sky-sdk

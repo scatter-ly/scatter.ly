@@ -9,5 +9,3 @@ spec:
   otherType: dc1
   owner: [it-team]
   region: us-east
-  isPageable: true
-  oncall1: it-team

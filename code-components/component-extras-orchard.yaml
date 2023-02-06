@@ -8,9 +8,6 @@ spec:
   lifecycle: production
   priority: 1
   sla: 24x7
-  isPageable: true
-  oncall1: user:sean
-  oncall2: user:reshma
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponentSidecar
@@ -22,8 +19,6 @@ spec:
   lifecycle: production
   priority: 1
   sla: 24x7
-  isPageable: true
-  oncall1: eng-squirrel-mob
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponentSidecar
@@ -33,7 +28,6 @@ spec:
   codecomponent: greenhouse-data
   platform: greenhouse
   lifecycle: production
-  isPageable: false
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponentSidecar
@@ -44,7 +38,6 @@ spec:
   platform: greenhouse
   lifecycle: experimental
   datacenter: [aws]
-  isPageable: false
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponentSidecar
@@ -56,6 +49,3 @@ spec:
   lifecycle: production
   priority: 1
   sla: 24x7
-  isPageable: true
-  oncall1: user:martha
-  oncall2: user:bill

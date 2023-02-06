@@ -6,9 +6,6 @@ spec:
   codecomponent: dumpster-data
   platform: dumpster-prod
   lifecycle: production
-  isPageable: true
-  oncall1: user:daniel
-  oncall2: user:michael
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponentSidecar
@@ -20,9 +17,6 @@ spec:
   lifecycle: production
   priority: 1
   sla: 24x7
-  isPageable: true
-  oncall1: user:brit
-  oncall2: user:billy
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponentSidecar
@@ -34,9 +28,6 @@ spec:
   lifecycle: production
   priority: 1
   sla: 24x7
-  isPageable: true
-  oncall1: user:brit
-  oncall2: user:billy
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponentSidecar
@@ -48,6 +39,3 @@ spec:
   lifecycle: production
   priority: 1
   sla: 24x7
-  isPageable: true
-  oncall1: user:brit
-  oncall2: user:billy
