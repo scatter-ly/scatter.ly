@@ -10,8 +10,6 @@ spec:
   platform: 'greenhouse'
   dependencyOf:
     ['code-component:greenhouse-mobile', code-component:greenhouse-data]
-  isPageable: true
-  oncall1: eng-squirrel-mob
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: PlatformComponent
@@ -26,5 +24,3 @@ spec:
   dependsOn: ['platform-component:greenhouse-lb']
   dependencyOf: ['code-component:greenhouse-data']
   datacenter: [aws]
-  isPageable: true
-  oncall1: eng-data

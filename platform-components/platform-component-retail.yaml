@@ -3,6 +3,8 @@ kind: PlatformComponent
 metadata:
   name: retail-vm
   description: Blue Sky / Retail virtual machine
+  annotations:
+    pagerduty.com/service-id: 'P2S21AB'
 spec:
   type: vm
   lifecycle: production
@@ -14,9 +16,6 @@ spec:
   dependencyOf: ['code-component:retail-app', 'code-component:retail-backend']
   priority: 1
   sla: 24x7
-  isPageable: true
-  oncall1: user:daniel
-  oncall2: user:fernando
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: PlatformComponent
@@ -24,7 +23,7 @@ metadata:
   name: retail-dns
   description: Blue Sky / Retail DNS
   annotations:
-    pagerduty.com/service-id: 'PJN77XW'
+    pagerduty.com/integration-key: 'a1be09f7001f450fd05203dceff092a2'
 spec:
   type: dns
   lifecycle: production
@@ -40,6 +39,3 @@ spec:
     ]
   priority: 1
   sla: 24x7
-  isPageable: true
-  oncall1: eng-raccoon-eco
-  oncall2: eng-raccoon-cloud

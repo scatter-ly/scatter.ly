@@ -22,6 +22,6 @@ metadata:
       icon: dashboard
 spec:
   type: package
-  owner: [user:fernando]
+  owner: [person:fernando]
   dependsOn: [code-component:wholesale-sdk]
   uri: https://github.com/example/blue-sky-cli

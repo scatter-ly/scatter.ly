@@ -3,6 +3,8 @@ kind: PlatformComponent
 metadata:
   name: crates-db
   description: Crates ERP data warehouse
+  annotations:
+    pagerduty.com/integration-key: 'f7c9c5daf8414e01c0eef3e31c3bad97'
 spec:
   type: database
   lifecycle: production
@@ -13,8 +15,6 @@ spec:
   dependencyOf: [code-component:crates-erp]
   priority: 2
   sla: 24x5
-  isPageable: true
-  oncall1: user:bill
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: PlatformComponent
@@ -31,8 +31,6 @@ spec:
   uri: s3://crates-config
   priority: 3
   sla: 24x5
-  isPageable: true
-  oncall1: eng-squirrel
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: PlatformComponent
@@ -48,5 +46,3 @@ spec:
   dependencyOf: [platform-component:crates-db, code-component:crates-erp]
   priority: 3
   sla: 24x5
-  isPageable: true
-  oncall1: eng-squirrel
