@@ -53,7 +53,6 @@ metadata:
 spec:
   targets:
     - ./org-oc.yaml
-    - ./oc-users.yaml
     - ./org-crow.yaml
     - ./team-squirrel.yaml
     - ./team-raccoon.yaml
