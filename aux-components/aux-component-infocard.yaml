@@ -19,6 +19,27 @@ spec:
 apiVersion: opencontext.com/v1alpha1
 kind: AuxComponent
 metadata:
+  name: reviewers-info
+  title: Reviewers Info
+  description: Slack and links for Reviewers
+  links:
+    - url: https://slack.com
+      title: Slack
+      icon: chat
+    - url: https://jira.com
+      title: Jira
+      icon: dashboard
+    - url: https://wiki.com
+      title: Wiki
+      icon: language
+spec:
+  type: infocard
+  lifecycle: production
+  owner: [scatter-ly/reviewers]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
   name: eng-raccoon-info
   title: Eng Raccoon Info
   description: Additional links for Eng Raccoon
