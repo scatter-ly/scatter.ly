@@ -81,6 +81,8 @@ apiVersion: opencontext.com/v1alpha1
 kind: Person
 metadata:
   name: jax
+  annotations:
+    'github.com/user-login': alctest-dev3
 spec:
   profile:
     displayName: Jax
@@ -92,6 +94,8 @@ apiVersion: opencontext.com/v1alpha1
 kind: Person
 metadata:
   name: fernando
+  annotations:
+    'github.com/user-login': alctest-dev
 spec:
   profile:
     displayName: Fernando
