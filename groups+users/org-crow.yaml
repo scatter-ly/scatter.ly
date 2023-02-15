@@ -23,6 +23,7 @@ metadata:
   annotations:
     'github.com/user-login': alctest-int
 spec:
+  ownedBy: paul
   profile:
     displayName: Paul
     displayEmail: paul@example.com

@@ -84,6 +84,7 @@ metadata:
   annotations:
     'github.com/user-login': alctest-dev3
 spec:
+  ownedBy: jax
   profile:
     displayName: Jax
     displayEmail: jax@example.com
@@ -97,6 +98,7 @@ metadata:
   annotations:
     'github.com/user-login': alctest-dev
 spec:
+  ownedBy: fernando
   profile:
     displayName: Fernando
     displayEmail: fernando@example.com
