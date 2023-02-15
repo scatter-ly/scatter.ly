@@ -4,7 +4,7 @@ metadata:
   name: crates-fe
   description: Crates frontend application
   annotations:
-    github.com/project-slug: 'opencontextinc/crates-frontend'
+    github.com/project-slug: 'scatter-ly/crates-frontend'
   title: Crates Frontend
   tags:
     - javascript

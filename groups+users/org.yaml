@@ -29,7 +29,7 @@ spec:
     picture: https://avatars.dicebear.com/api/identicon/engineering@example.com.svg?background=%23fff&margin=2
   parent: oc-inc
   children:
-    [eng-squirrel, eng-raccoon, opencontextinc/reviewers, opencontextinc/docs-core, opencontextinc/dev-core, opencontextinc/maintainers, opencontextinc-test/dev-core]
+    [eng-squirrel, eng-raccoon, scatter-ly/reviewers, scatter-ly/docs-core, scatter-ly/dev-core, scatter-ly/maintainers]
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: Team
