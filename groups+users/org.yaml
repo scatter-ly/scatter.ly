@@ -62,3 +62,4 @@ spec:
     - ./eng-raccoon.yaml
     - ./prod-squirrel.yaml
     - ./prod-raccoon.yaml
+    - ./scatterly-users.yaml
