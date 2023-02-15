@@ -11,6 +11,8 @@ metadata:
     - url: https://example.com/help
       title: Support
       icon: help
+  annotations:
+    github.com/project-slug: 'scatter-ly/retail-app'
 spec:
   type: repository
   owner: [prod-raccoon-oss, eng-raccoon-cloud]

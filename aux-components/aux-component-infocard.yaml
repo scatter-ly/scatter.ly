@@ -14,7 +14,7 @@ metadata:
 spec:
   type: infocard
   lifecycle: production
-  owner: [opencontextinc/dev-core]
+  owner: [scatter-ly/dev-core]
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: AuxComponent
