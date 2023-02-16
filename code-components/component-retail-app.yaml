@@ -21,31 +21,6 @@ metadata:
       icon: github
   annotations:
     github.com/project-slug: 'scatter-ly/retail-app'
-relations:
-  - type: hasContributor
-    targetRef: person:scatter-ly/alchen99
-    target:
-      kind: person
-      namespace: scatter-ly
-      name: alchen99
-  - type: hasContributor
-    targetRef: person:scatter-ly/alctest-dev
-    target:
-      kind: person
-      namespace: scatter-ly
-      name: alctest-dev
-  - type: ownedBy
-    targetRef: person:scatter-ly/alchen99
-    target:
-      kind: person
-      namespace: scatter-ly
-      name: alchen99
-  - type: ownedBy
-    targetRef: person:scatter-ly/alctest-dev
-    target:
-      kind: person
-      namespace: scatter-ly
-      name: alctest-dev
 spec:
   type: repository
   owner: [prod-raccoon-oss, eng-raccoon-cloud]
