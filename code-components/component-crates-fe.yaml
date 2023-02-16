@@ -10,12 +10,28 @@ metadata:
     - javascript
     - typescript
   links:
-    - url: https://example.com/help
-      title: Support
-      icon: help
+    - url: https://github.com/scatter-ly/crates-frontend/issues
+      title: Issues
+      icon: github
+    - url: https://github.com/scatter-ly/crates-frontend/pulls
+      title: Pull Requests
+      icon: github
+    - url: https://github.com/scatter-ly/crates-frontend/releases
+      title: Releases
+      icon: github
+    - url: https://github.com/scatter-ly/crates-frontend/deployments
+      title: Deployments
+      icon: github
 spec:
-  type: package
+  type: repository
   owner: [eng-squirrel]
   platform: crates
   subcomponentOf: [code-component:crates-erp]
-  uri: https://example.com/order
+  uri: https://github.com/scatter-ly/crates-frontend
+  languages:
+    - JavaScript
+    - Dockerfile
+    - TypeScript
+  releases: []
+  contributors:
+    - person:scatter-ly/alchen99
