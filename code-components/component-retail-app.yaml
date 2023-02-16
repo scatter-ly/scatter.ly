@@ -5,19 +5,63 @@ metadata:
   description: Blue Sky / Retail web app
   title: Retail app
   tags:
-    - react
     - typescript
   links:
-    - url: https://example.com/help
-      title: Support
-      icon: help
+    - url: https://github.com/scatter-ly/retail-app/issues
+      title: Issues
+      icon: github
+    - url: https://github.com/scatter-ly/retail-app/pulls
+      title: Pull Requests
+      icon: github
+    - url: https://github.com/scatter-ly/retail-app/releases
+      title: Releases
+      icon: github
+    - url: https://github.com/scatter-ly/retail-app/deployments
+      title: Deployments
+      icon: github
   annotations:
     github.com/project-slug: 'scatter-ly/retail-app'
+relations:
+  - type: hasContributor
+    targetRef: person:scatter-ly/alchen99
+    target:
+      kind: person
+      namespace: scatter-ly
+      name: alchen99
+  - type: hasContributor
+    targetRef: person:scatter-ly/alctest-dev
+    target:
+      kind: person
+      namespace: scatter-ly
+      name: alctest-dev
+  - type: ownedBy
+    targetRef: person:scatter-ly/alchen99
+    target:
+      kind: person
+      namespace: scatter-ly
+      name: alchen99
+  - type: ownedBy
+    targetRef: person:scatter-ly/alctest-dev
+    target:
+      kind: person
+      namespace: scatter-ly
+      name: alctest-dev
 spec:
   type: repository
   owner: [prod-raccoon-oss, eng-raccoon-cloud]
   dependsOn: [code-component:wholesale-graphql]
-  uri: https://example.com/retail-app
+  uri: https://github.com/scatter-ly/retail-app
+  languages:
+    - Dockerfile
+    - TypeScript
+  releases:
+    - name: v0.1.1
+      uri: https://github.com/scatter-ly/retail-app/releases/tag/v0.1.1
+    - name: v0.1.0
+      uri: https://github.com/scatter-ly/retail-app/releases/tag/v0.1.0
+  contributors:
+    - person:scatter-ly/alchen99
+    - person:scatter-ly/alctest-dev
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponent
