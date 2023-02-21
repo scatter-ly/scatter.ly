@@ -22,6 +22,10 @@ kind: Team
 metadata:
   name: eng-raccoon-cloud
   description: Raccoon Cloud
+  links:
+    - url: https://notion.so
+      title: Team Handbook
+      icon: document
 spec:
   type: business-unit
   profile:
