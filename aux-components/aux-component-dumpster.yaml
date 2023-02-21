@@ -33,7 +33,7 @@ metadata:
 spec:
   type: website
   lifecycle: planning
-  owner: [eng-raccoon-cloud, prod-raccoon-oss]
+  owner: [eng-raccoon, prod-raccoon-oss]
   dependsOn: [code-component:dumpster-data]
   platform: dumpster-prod
   uri: https://example.com/website
