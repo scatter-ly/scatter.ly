@@ -54,3 +54,21 @@ spec:
   type: infocard
   lifecycle: production
   owner: [eng-raccoon]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: eng-raccoon-cloud-info
+  title: Eng Raccoon Info
+  description: Additional links for Eng Raccoon Cloud
+  links:
+    - url: https://slack.com
+      title: Slack
+      icon: chat
+    - url: https://jira.com
+      title: Jira
+      icon: dashboard
+spec:
+  type: infocard
+  lifecycle: production
+  owner: [eng-raccoon-cloud]

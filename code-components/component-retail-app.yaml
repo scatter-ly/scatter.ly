@@ -36,6 +36,8 @@ spec:
       uri: https://github.com/scatter-ly/retail-app/releases/tag/v0.1.0
   contributors:
     - person:scatter-ly/alchen99
+    - person:scatter-ly/bcornils
+    - person:scatter-ly/bdwalter
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponent
