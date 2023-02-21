@@ -3,6 +3,13 @@ kind: PlatformComponent
 metadata:
   name: dumpster-vm
   description: Dumpster virtual machine
+  links:
+    - url: https://example.com/cloud
+      title: Cloud Console
+      icon: cloud
+    - url: https://example.com/dashboard
+      title: Dumpster VM Dashboard
+      icon: dashboard
 spec:
   type: vm
   lifecycle: production
@@ -24,6 +31,10 @@ kind: PlatformComponent
 metadata:
   name: dumpster-cloud-dns
   description: Dumpster cloud DNS
+  links:
+    - url: https://example.com/dns-docs
+      title: DNS docs
+      icon: docs
 spec:
   type: dns
   lifecycle: production
