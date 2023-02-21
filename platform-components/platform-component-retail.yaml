@@ -3,6 +3,13 @@ kind: PlatformComponent
 metadata:
   name: retail-vm
   description: Blue Sky / Retail virtual machine
+  links:
+    - url: https://example.com/cloud
+      title: Cloud Console
+      icon: cloud
+    - url: https://example.com/dashboard
+      title: Retail VM Dashboard
+      icon: dashboard
   annotations:
     pagerduty.com/service-id: 'P2S21AB'
 spec:
@@ -22,6 +29,10 @@ kind: PlatformComponent
 metadata:
   name: retail-dns
   description: Blue Sky / Retail DNS
+  links:
+    - url: https://example.com/dns-docs
+      title: Retail DNS docs
+      icon: docs
   annotations:
     pagerduty.com/integration-key: 'a1be09f7001f450fd05203dceff092a2'
 spec:
