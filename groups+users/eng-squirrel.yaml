@@ -3,6 +3,13 @@ kind: Team
 metadata:
   name: eng-squirrel
   description: Squirrel Engineering Team
+  links:
+    - url: https://slack.com
+      title: Slack
+      icon: chat
+    - url: https://jira.com
+      title: Jira
+      icon: dashboard
 spec:
   type: department
   profile:
