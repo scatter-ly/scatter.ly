@@ -111,6 +111,13 @@ kind: PlatformComponent
 metadata:
   name: dumpster-config
   description: Dumpster config bucket
+  links:
+    - url: https://console.cloud.google.com
+      title: GCP Cloud Console
+      icon: cloud
+    - url: https://example.com/dumpster-config-docs
+      title: Dumpster config docs
+      icon: docs
 spec:
   type: gcs
   lifecycle: production
