@@ -4,12 +4,9 @@ metadata:
   name: eng-squirrel
   description: Squirrel Engineering Team
   links:
-    - url: https://slack.com
-      title: Slack
-      icon: chat
-    - url: https://jira.com
-      title: Jira
-      icon: dashboard
+    - url: https://example.com/squirrel-team-handbook
+      title: Team Handbook
+      icon: language
 spec:
   type: department
   profile:
