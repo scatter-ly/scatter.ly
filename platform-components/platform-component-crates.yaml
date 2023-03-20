@@ -21,6 +21,8 @@ kind: PlatformComponent
 metadata:
   name: crates-config
   description: Crates config bucket
+  annotations:
+    pagerduty.com/service-id: PZ4K9HQ
 spec:
   type: s3
   lifecycle: production
