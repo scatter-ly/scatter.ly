@@ -32,6 +32,19 @@ spec:
     - JavaScript
     - Dockerfile
     - TypeScript
-  releases: []
+  releases:
+    - name: v0.2.1
+      uri: https://github.com/scatter-ly/crates-frontend/releases/tag/v0.2.1
+    - name: v0.2.0
+      uri: https://github.com/scatter-ly/crates-frontend/releases/tag/v0.2.0
+  vulnerabilityAlerts:
+    - uri: https://github.com/scatter-ly/crates-frontend/security/dependabot/1
+      updatedAt: 2023-02-07T20:33:18Z
+      severity: high
+      summary: Prototype Pollution in JSON5 via Parse Method
+      manifestPath: yarn.lock
+      package: json5
+      versionRange: < 1.0.2
+      patchedVersion: 1.0.2
   contributors:
     - person:scatter-ly/alchen99
