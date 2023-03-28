@@ -3,6 +3,10 @@ kind: Team
 metadata:
   name: eng-squirrel
   description: Squirrel Engineering Team
+  links:
+    - url: https://example.com/squirrel-team-handbook
+      title: Team Handbook
+      icon: language
 spec:
   type: department
   profile:

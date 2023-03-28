@@ -111,7 +111,7 @@ apiVersion: opencontext.com/v1alpha1
 kind: AuxComponent
 metadata:
   name: retail-app-maintenance
-  title: Retail App Maintenance
+  title: Retail App Runbook
   description: Maintenance documentation
   tags:
     - docs

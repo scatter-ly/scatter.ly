@@ -14,7 +14,28 @@ metadata:
 spec:
   type: infocard
   lifecycle: production
-  owner: [opencontextinc/dev-core]
+  owner: [scatter-ly/dev-core]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: reviewers-info
+  title: Reviewers Info
+  description: Slack and links for Reviewers
+  links:
+    - url: https://slack.com
+      title: Slack
+      icon: chat
+    - url: https://jira.com
+      title: Jira
+      icon: dashboard
+    - url: https://wiki.com
+      title: Wiki
+      icon: language
+spec:
+  type: infocard
+  lifecycle: production
+  owner: [scatter-ly/reviewers]
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: AuxComponent
@@ -33,3 +54,39 @@ spec:
   type: infocard
   lifecycle: production
   owner: [eng-raccoon]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: eng-raccoon-cloud-info
+  title: Eng Raccoon Cloud Info
+  description: Additional links for Eng Raccoon Cloud
+  links:
+    - url: https://slack.com
+      title: Slack
+      icon: chat
+    - url: https://jira.com
+      title: Jira
+      icon: dashboard
+spec:
+  type: infocard
+  lifecycle: production
+  owner: [eng-raccoon-cloud]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: AuxComponent
+metadata:
+  name: eng-squirrel-info
+  title: Engineering Squirrel Info
+  description: Additional links for Engineering Squirrel
+  links:
+    - url: https://slack.com
+      title: Slack
+      icon: chat
+    - url: https://jira.com
+      title: Jira
+      icon: dashboard
+spec:
+  type: infocard
+  lifecycle: production
+  owner: [eng-squirrel]
