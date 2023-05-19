@@ -7,4 +7,40 @@ metadata:
 spec:
   type: cloud
   owner: [cloud-team]
-  region: us-central1-c
+  region: global
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Datacenter
+metadata:
+  name: gcp-global
+  title: GCP Global
+  description: Google Cloud Platform
+spec:
+  type: cloud
+  owner: [cloud-team]
+  region: global
+  partOf: [gcp]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Datacenter
+metadata:
+  name: gcp-us
+  title: GCP US
+  description: Google Cloud Platform
+spec:
+  type: cloud
+  owner: [cloud-team]
+  region: US
+  partOf: [gcp-global]
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Datacenter
+metadata:
+  name: gcp-us-central1
+  title: GCP US Central 1
+  description: Google Cloud Platform
+spec:
+  type: cloud
+  owner: [cloud-team]
+  region: US
+  partOf: [gcp-global, gcp-us]
