@@ -20,7 +20,10 @@ apiVersion: opencontext.com/v1alpha1
 kind: Person
 metadata:
   name: paul
+  annotations:
+    'github.com/user-login': alctest-int
 spec:
+  ownedBy: paul
   profile:
     displayName: Paul
     displayEmail: paul@example.com

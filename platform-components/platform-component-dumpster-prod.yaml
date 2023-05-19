@@ -3,6 +3,15 @@ kind: PlatformComponent
 metadata:
   name: dumpster-vm
   description: Dumpster virtual machine
+  links:
+    - url: https://example.com/cloud
+      title: Cloud Console
+      icon: cloud
+    - url: https://example.com/dashboard
+      title: Dumpster VM Dashboard
+      icon: dashboard
+  annotations:
+    pagerduty.com/integration-key: '2a3703ef9af44200c024fc13c477ea48'
 spec:
   type: vm
   lifecycle: production
@@ -24,6 +33,10 @@ kind: PlatformComponent
 metadata:
   name: dumpster-cloud-dns
   description: Dumpster cloud DNS
+  links:
+    - url: https://example.com/dns-docs
+      title: DNS docs
+      icon: docs
 spec:
   type: dns
   lifecycle: production
@@ -66,6 +79,15 @@ kind: PlatformComponent
 metadata:
   name: dumpster-db
   description: Dumpster primary data store
+  links:
+    - url: https://example.com/cloud
+      title: Cloud Console
+      icon: cloud
+    - url: https://example.com/dashboard
+      title: Dumpster DB Dashboard
+      icon: dashboard
+  annotations:
+    pagerduty.com/integration-key: '17524f4b0103460bd014c1b582c51ee7'
 spec:
   type: database
   lifecycle: production
@@ -100,6 +122,15 @@ kind: PlatformComponent
 metadata:
   name: dumpster-config
   description: Dumpster config bucket
+  links:
+    - url: https://console.cloud.google.com
+      title: GCP Cloud Console
+      icon: cloud
+    - url: https://example.com/dumpster-config-docs
+      title: Dumpster config docs
+      icon: docs
+  annotations:
+    pagerduty.com/service-id: P7MFATB
 spec:
   type: gcs
   lifecycle: production
