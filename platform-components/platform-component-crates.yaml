@@ -3,6 +3,13 @@ kind: PlatformComponent
 metadata:
   name: crates-db
   description: Crates ERP data warehouse
+  links:
+    - url: https://example.com/cloud
+      title: Cloud Console
+      icon: cloud
+    - url: https://example.com/dashboard
+      title: Crates DB Dashboard
+      icon: dashboard
   annotations:
     pagerduty.com/integration-key: 'f7c9c5daf8414e01c0eef3e31c3bad97'
 spec:
@@ -21,6 +28,15 @@ kind: PlatformComponent
 metadata:
   name: crates-config
   description: Crates config bucket
+  links:
+    - url: https://aws.amazon.com/console
+      title: AWS Cloud Console
+      icon: cloud
+    - url: https://example.com/crate-config-docs
+      title: Crates config docs
+      icon: docs
+  annotations:
+    pagerduty.com/service-id: PZ4K9HQ
 spec:
   type: s3
   lifecycle: production
@@ -37,6 +53,10 @@ kind: PlatformComponent
 metadata:
   name: crates-ssl
   description: Crates SSL
+  links:
+    - url: https://example.com/crate-ssl-docs
+      title: Crates SSL docs
+      icon: docs
 spec:
   type: ssl certificate
   lifecycle: production
