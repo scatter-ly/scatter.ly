@@ -22,6 +22,10 @@ kind: Team
 metadata:
   name: eng-raccoon-cloud
   description: Raccoon Cloud
+  links:
+    - url: https://notion.so
+      title: Team Handbook
+      icon: document
 spec:
   type: business-unit
   profile:
@@ -81,7 +85,10 @@ apiVersion: opencontext.com/v1alpha1
 kind: Person
 metadata:
   name: jax
+  annotations:
+    'github.com/user-login': alctest-dev3
 spec:
+  ownedBy: jax
   profile:
     displayName: Jax
     displayEmail: jax@example.com
@@ -92,7 +99,10 @@ apiVersion: opencontext.com/v1alpha1
 kind: Person
 metadata:
   name: fernando
+  annotations:
+    'github.com/user-login': alctest-dev
 spec:
+  ownedBy: fernando
   profile:
     displayName: Fernando
     displayEmail: fernando@example.com
