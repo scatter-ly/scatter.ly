@@ -4,9 +4,19 @@ metadata:
   name: aws
   title: AWS
   description: Amazon Web Services
-  annotations:
-    pagerduty.com/integration-key: '54e58ae58bc64909d0e855fdb07ec4b2'
 spec:
   type: cloud
   owner: [cloud-team]
   region: us-east-1
+---
+apiVersion: opencontext.com/v1alpha1
+kind: Datacenter
+metadata:
+  name: aws-us
+  title: AWS US
+  description: Amazon Web Services
+spec:
+  type: cloud
+  owner: [cloud-team]
+  region: us-east-1
+  partOf: [aws]

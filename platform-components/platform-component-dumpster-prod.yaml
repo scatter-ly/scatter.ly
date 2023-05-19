@@ -3,20 +3,12 @@ kind: PlatformComponent
 metadata:
   name: dumpster-vm
   description: Dumpster virtual machine
-  links:
-    - url: https://example.com/cloud
-      title: Cloud Console
-      icon: cloud
-    - url: https://example.com/dashboard
-      title: Dumpster VM Dashboard
-      icon: dashboard
-  annotations:
-    pagerduty.com/integration-key: '2a3703ef9af44200c024fc13c477ea48'
 spec:
   type: vm
+  subtype: e2-medium
   lifecycle: production
   owner: [it-ops]
-  platform: retail
+  platform: [retail]
   datacenter: [aws, gcp]
   dependsOn:
     [
@@ -33,15 +25,11 @@ kind: PlatformComponent
 metadata:
   name: dumpster-cloud-dns
   description: Dumpster cloud DNS
-  links:
-    - url: https://example.com/dns-docs
-      title: DNS docs
-      icon: docs
 spec:
   type: dns
   lifecycle: production
   owner: [eng-raccoon]
-  platform: retail
+  platform: [retail]
   datacenter: [aws]
   dependsOn: [platform-component:wholesale-firewall]
   dependencyOf:
@@ -62,7 +50,7 @@ spec:
   type: dns
   lifecycle: production
   owner: [eng-raccoon-cloud]
-  platform: retail
+  platform: [retail]
   datacenter: [vendor]
   dependsOn: [platform-component:dumpster-db]
   dependencyOf:
@@ -79,20 +67,12 @@ kind: PlatformComponent
 metadata:
   name: dumpster-db
   description: Dumpster primary data store
-  links:
-    - url: https://example.com/cloud
-      title: Cloud Console
-      icon: cloud
-    - url: https://example.com/dashboard
-      title: Dumpster DB Dashboard
-      icon: dashboard
-  annotations:
-    pagerduty.com/integration-key: '17524f4b0103460bd014c1b582c51ee7'
 spec:
   type: database
+  subtype: 'postgresql 14'
   lifecycle: production
   owner: [person:daniel]
-  platform: dumpster-prod
+  platform: [dumpster-prod]
   datacenter: [aws]
   dependencyOf: [code-component:dumpster-data]
   priority: 1
@@ -111,7 +91,7 @@ spec:
   type: database
   lifecycle: production
   owner: [person:daniel]
-  platform: dumpster-prod
+  platform: [dumpster-prod]
   datacenter: [aws]
   dependencyOf: [code-component:dumpster-data, platform-component:dumpster-db]
   priority: 1
@@ -122,20 +102,12 @@ kind: PlatformComponent
 metadata:
   name: dumpster-config
   description: Dumpster config bucket
-  links:
-    - url: https://console.cloud.google.com
-      title: GCP Cloud Console
-      icon: cloud
-    - url: https://example.com/dumpster-config-docs
-      title: Dumpster config docs
-      icon: docs
-  annotations:
-    pagerduty.com/service-id: P7MFATB
 spec:
   type: gcs
+  subtype: public
   lifecycle: production
   owner: [eng-raccoon-cloud]
-  platform: crates
+  platform: [crates, dumpster-prod]
   datacenter: [gcp]
   dependencyOf: [platform-component:dumpster-db, code-component:dumpster-ui]
   priority: 2
@@ -148,9 +120,10 @@ metadata:
   description: Dumpster secrets bucket
 spec:
   type: s3
+  subtype: public
   lifecycle: production
   owner: [eng-raccoon]
-  platform: dumpster-prod
+  platform: [dumpster-prod]
   datacenter: [aws]
   dependencyOf:
     [
