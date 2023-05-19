@@ -14,9 +14,10 @@ metadata:
     pagerduty.com/integration-key: 'f7c9c5daf8414e01c0eef3e31c3bad97'
 spec:
   type: database
+  subtype: 'mysql 8'
   lifecycle: production
   owner: [eng-squirrel]
-  platform: crates
+  platform: [crates]
   datacenter: [aws]
   dependsOn: [datacenter:aws]
   dependencyOf: [code-component:crates-erp]
@@ -39,9 +40,10 @@ metadata:
     pagerduty.com/service-id: PZ4K9HQ
 spec:
   type: s3
+  subtype: private
   lifecycle: production
   owner: [eng-squirrel]
-  platform: crates
+  platform: [crates]
   datacenter: [aws]
   dependencyOf: [platform-component:crates-db, code-component:crates-erp]
   uri: s3://crates-config
@@ -61,7 +63,7 @@ spec:
   type: ssl certificate
   lifecycle: production
   owner: [eng-squirrel]
-  platform: crates
+  platform: [crates]
   datacenter: [aws]
   dependencyOf: [platform-component:crates-db, code-component:crates-erp]
   priority: 3

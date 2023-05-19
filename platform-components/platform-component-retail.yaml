@@ -14,9 +14,10 @@ metadata:
     pagerduty.com/service-id: 'P2S21AB'
 spec:
   type: vm
+  subtype: micro
   lifecycle: production
   owner: [it-ops]
-  platform: retail
+  platform: [retail]
   datacenter: [aws, gcp]
   dependsOn:
     ['platform-component:wholesale-lb', 'platform-component:wholesale-secrets']
@@ -39,7 +40,7 @@ spec:
   type: dns
   lifecycle: production
   owner: [it-ops]
-  platform: retail
+  platform: [retail]
   datacenter: [gcp]
   dependencyOf:
     [
