@@ -5,9 +5,10 @@ metadata:
   description: Blue Sky / Wholesale load balancer
 spec:
   type: loadbalancer
+  subtype: internal
   lifecycle: experimental
   owner: [eng-raccoon-aws]
-  platform: wholesale
+  platform: [wholesale]
   dependencyOf: ['code-component:wholesale-cli', code-component:wholesale-sdk]
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -17,9 +18,10 @@ metadata:
   description: Blue Sky / Wholesale database
 spec:
   type: database
+  subtype: 'postgresql 14'
   lifecycle: production
   owner: [eng-racoon-aws, it-ops, contract-crow]
-  platform: wholesale
+  platform: [wholesale]
   dependsOn: ['platform-component:wholesale-lb']
   dependencyOf: ['code-component:wholesale-cli']
   datacenter: [aws]
@@ -31,9 +33,10 @@ metadata:
   description: Blue Sky / Wholesale secrets bucket
 spec:
   type: s3
+  subtype: private
   lifecycle: experimental
   owner: [eng-raccoon-aws]
-  platform: wholesale
+  platform: [wholesale]
   datacenter: [aws]
   dependencyOf:
     [
@@ -54,7 +57,7 @@ spec:
   type: firewall
   lifecycle: experimental
   owner: [person:daniel]
-  platform: wholesale
+  platform: [wholesale]
   datacenter: [aws]
   dependencyOf:
     [
