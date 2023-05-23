@@ -5,9 +5,10 @@ metadata:
   description: Greenhouse load balancer
 spec:
   type: loadbalancer
+  subtype: external_managed
   lifecycle: production
   owner: [eng-squirrel-data]
-  platform: 'greenhouse'
+  platform: ['greenhouse']
   dependencyOf:
     ['code-component:greenhouse-mobile', code-component:greenhouse-data]
 ---
@@ -18,9 +19,10 @@ metadata:
   description: Greenhouse database
 spec:
   type: database
+  subtype: 'mysql 2'
   lifecycle: production
   owner: [eng-squirrel-data]
-  platform: 'greenhouse'
+  platform: ['greenhouse']
   dependsOn: ['platform-component:greenhouse-lb']
   dependencyOf: ['code-component:greenhouse-data']
   datacenter: [aws]
