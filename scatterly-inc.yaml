@@ -5,7 +5,7 @@ metadata:
   description: A collection of all Scatter.ly examples
   links:
     - title: Scatter.ly Website
-      url: http://scatter.ly
+      url: http://example.com/scatterly
     - title: GitHub Issues
       url: https://github.com/scatter-ly/scatter.ly
       icon: github
