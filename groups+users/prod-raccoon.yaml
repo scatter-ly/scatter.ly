@@ -11,7 +11,7 @@ spec:
     picture: https://avatars.dicebear.com/api/identicon/prod-raccoon@example.com.svg?background=%23fff&margin=2
   parent: team-raccoon
   children: [prod-raccoon-ent, prod-raccoon-oss]
-  members: [nancy, thomas, mark, steph, joel, beth, melissa]
+  members: [nancy, thomas, mark, steph, joel]
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: Team

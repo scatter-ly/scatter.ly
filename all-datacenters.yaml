@@ -1,7 +1,7 @@
 apiVersion: opencontext.com/v1alpha1
 kind: Location
 metadata:
-  name: oc-datacenters
+  name: datacenters
   description: A collection of all OpenContext Datacenters
 spec:
   targets:
