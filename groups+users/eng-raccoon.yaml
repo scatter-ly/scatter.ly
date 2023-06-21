@@ -15,7 +15,7 @@ spec:
     picture: https://avatars.dicebear.com/api/identicon/eng-raccoon@example.com.svg?background=%23fff&margin=25
   parent: team-raccoon
   children: [eng-raccoon-cloud, eng-raccoon-onprem, eng-raccoon-eco]
-  members: [jax, fernando, daniel, brit, billy, josh, audrey]
+  members: [jax, fernando, daniel, brit, billy, josh]
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: Team

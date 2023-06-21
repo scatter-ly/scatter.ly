@@ -11,7 +11,7 @@ spec:
     picture: https://avatars.dicebear.com/api/identicon/prod-squirrel@example.com.svg?background=%23fff&margin=25
   parent: team-squirrel
   children: [prod-squirrel-mob, prod-squirrel-data]
-  members: [sam, stacie, joe, sophie, brian]
+  members: [sam, stacie, joe, sophie]
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: Team

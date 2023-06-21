@@ -18,7 +18,7 @@ spec:
     pagerHandle: squirrel-eng
   parent: team-squirrel
   children: [eng-squirrel-mob, eng-squirrel-data, eng-squirrel-qa]
-  members: [bill, martha, reshma, george, sean, alice, jim]
+  members: [bill, martha, reshma, george, sean]
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: Team

@@ -7,11 +7,11 @@ spec:
   type: department
   profile:
     displayName: Team Raccoon
-    email: oc-org@example.com
+    email: team.raccoon@example.com
     picture: https://avatars.dicebear.com/api/identicon/catalog-eng@example.com.svg?background=%23fff&margin=25
     timezone: America/Los_Angeles
-    slackHandle: oc
-    pagerHandle: oc
-  parent: oc-inc
+    slackHandle: team_raccoon
+    pagerHandle: team_raccoon
+  parent: scatterly-inc
   children: [eng-raccoon, prod-raccoon]
-  members: [audrey, beth, melissa]
+  members: []

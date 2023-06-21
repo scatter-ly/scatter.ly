@@ -1,20 +1,20 @@
 apiVersion: opencontext.com/v1alpha1
 kind: Team
 metadata:
-  name: oc-inc
-  description: The OpenContext organization
+  name: scatterly-inc
+  description: The Scatter.ly organization
   links:
-    - url: https://www.opencontext.com/
+    - url: http://example.com/scatterly
       title: Website
     - url: https://meta.wikimedia.org/wiki/
       title: Intranet
 spec:
   type: organization
   profile:
-    displayName: OpenContext Inc.
-    email: info@opencontext.com
+    displayName: Scatter.ly
+    email: scatterly@example.com
     picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
-  children: [engineering, product, oc-org]
+  children: [engineering, product]
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: Team
@@ -27,7 +27,7 @@ spec:
     displayName: Engineering Team
     email: engineering@example.com
     picture: https://avatars.dicebear.com/api/identicon/engineering@example.com.svg?background=%23fff&margin=2
-  parent: oc-inc
+  parent: scatterly-inc
   children:
     [eng-squirrel, eng-raccoon, scatter-ly/reviewers, scatter-ly/docs-core, scatter-ly/dev-core, scatter-ly/maintainers]
 ---
@@ -42,18 +42,16 @@ spec:
     displayName: Product Team
     email: product@example.com
     picture: https://avatars.dicebear.com/api/identicon/product@example.com.svg?background=%23fff&margin=2
-  parent: oc-inc
+  parent: scatterly-inc
   children: [prod-squirrel, prod-raccoon]
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: Location
 metadata:
-  name: oc-groups
-  description: A collection of all OpenContext Teams
+  name: scatterly-teams
+  description: A collection of all Scatter.ly Teams
 spec:
   targets:
-    - ./org-oc.yaml
-    - ./oc-users.yaml
     - ./org-crow.yaml
     - ./team-squirrel.yaml
     - ./team-raccoon.yaml

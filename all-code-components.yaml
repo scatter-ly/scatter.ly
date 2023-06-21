@@ -1,7 +1,7 @@
 apiVersion: opencontext.com/v1alpha1
 kind: Location
 metadata:
-  name: oc-code-components
+  name: code-components
   description: A collection of all OpenContext code components
 spec:
   targets:
