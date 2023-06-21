@@ -1,8 +1,0 @@
-apiVersion: opencontext.com/v1alpha1
-kind: Platform
-metadata:
-  name: it-platform
-  description: IT operations
-spec:
-  owner: [it-ops]
-  hasComponent: [aux-component:servicedesk, platform-component:jira-server, platform-component:servicedesk-server, code-component:sandbox]

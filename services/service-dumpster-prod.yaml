@@ -1,5 +1,5 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Platform
+kind: Service
 metadata:
   name: dumpster-prod
   description: Dumpster mapping product line

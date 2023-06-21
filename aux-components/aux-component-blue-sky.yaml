@@ -8,7 +8,7 @@ spec:
   type: document
   lifecycle: planning
   owner: [prod-raccoon]
-  platform: blue-sky
+  service: blue-sky
   uri: https://example.com/docsdocs
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -21,5 +21,5 @@ spec:
   type: website
   lifecycle: planning
   owner: [prod-raccoon-ent]
-  platform: blue-sky
+  service: blue-sky
   uri: https://example.com/new-buffet

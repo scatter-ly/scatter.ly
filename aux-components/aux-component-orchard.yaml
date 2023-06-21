@@ -10,7 +10,7 @@ spec:
   type: website
   lifecycle: production
   owner: [eng-squirrel]
-  platform: crates
+  service: crates
   uri: https://example.com/admin
   priority: 1
   sla: 24x5
@@ -27,7 +27,7 @@ spec:
   type: document
   lifecycle: production
   owner: [prod-squirrel]
-  platform: crates
+  service: crates
   uri: https://example.com/docs
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -40,7 +40,7 @@ spec:
   type: document
   lifecycle: production
   owner: [prod-squirrel]
-  platform: greenhouse
+  service: greenhouse
   uri: https://example.com/moredocs
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -55,7 +55,7 @@ spec:
   type: document
   lifecycle: production
   owner: [prod-squirrel]
-  platform: crates
+  service: crates
   uri: https://www.notion.so/opencontext/Crates-ERP-Architectural-RFC-282de1305a614140ac630fae1601e65e
   dependsOn: [code-component:crates-erp]
 ---
@@ -71,7 +71,7 @@ spec:
   type: document
   lifecycle: production
   owner: [eng-squirrel]
-  platform: crates
+  service: crates
   uri: https://www.notion.so/opencontext/Crates-ERP-Compliance-Rules-8ce786dee95142138a883280eefb59a9
   dependsOn: [code-component:crates-erp]
 ---
@@ -87,7 +87,7 @@ spec:
   type: document
   lifecycle: production
   owner: [eng-squirrel]
-  platform: crates
+  service: crates
   uri: https://www.notion.so/opencontext/Crates-ERP-Threat-Model-cb23445f42ad43a3be217621c3a46148
   dependsOn: [code-component:crates-erp]
 ---
@@ -103,7 +103,7 @@ spec:
   type: document
   lifecycle: production
   owner: [prod-squirrel]
-  platform: crates
+  service: crates
   uri: https://www.notion.so/opencontext/Crates-ERP-Service-Ownership-Doc-6e53655f504e4aeaa74cb18c3e82bc74
   dependsOn: [code-component:crates-erp]
 ---
@@ -119,7 +119,7 @@ spec:
   type: document
   lifecycle: production
   owner: [eng-squirrel]
-  platform: retail
+  service: retail
   uri: https://www.notion.so/opencontext/Retail-App-Maintenance-49a977c54d074d1aae70eea154a1680e
   dependsOn: [code-component:retail-app]
 ---
@@ -135,7 +135,7 @@ spec:
   type: document
   lifecycle: production
   owner: [eng-squirrel]
-  platform: retail
+  service: retail
   uri: https://www.notion.so/opencontext/Retail-App-Threat-Model-a02f5c6c4ee24400a94bf8953e420387
   dependsOn: [code-component:retail-app]
 ---
@@ -151,7 +151,7 @@ spec:
   type: document
   lifecycle: production
   owner: [prod-squirrel]
-  platform: retail
+  service: retail
   uri: https://www.notion.so/opencontext/Retail-App-Migration-Plan-300557d741b34c6d87993f1c31e7130a
   dependsOn: [code-component:retail-app]
 ---
@@ -167,6 +167,6 @@ spec:
   type: document
   lifecycle: production
   owner: [prod-squirrel]
-  platform: retail
+  service: retail
   uri: https://www.notion.so/opencontext/Retail-App-Service-Ownership-Doc-6361695aea6f443ab78ad49926258f21
   dependsOn: [code-component:retail-app]

@@ -4,7 +4,7 @@ metadata:
   name: crates-erp-extras
 spec:
   codecomponent: crates-erp
-  platform: crates
+  service: crates
   lifecycle: production
   priority: 1
   sla: 24x7
@@ -15,7 +15,7 @@ metadata:
   name: crates-fe-extras
 spec:
   codecomponent: crates-fe
-  platform: crates
+  service: crates
   lifecycle: production
   priority: 1
   sla: 24x7
@@ -26,7 +26,7 @@ metadata:
   name: greenhouse-data-extras
 spec:
   codecomponent: greenhouse-data
-  platform: greenhouse
+  service: greenhouse
   lifecycle: production
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -35,7 +35,7 @@ metadata:
   name: greenhouse-dataset-extras
 spec:
   codecomponent: greenhouse-dataset
-  platform: greenhouse
+  service: greenhouse
   lifecycle: experimental
   datacenter: [aws]
 ---
@@ -45,7 +45,7 @@ metadata:
   name: greenhouse-mobile-extras
 spec:
   codecomponent: greenhouse-mobile
-  platform: greenhouse
+  service: greenhouse
   lifecycle: production
   priority: 1
   sla: 24x7

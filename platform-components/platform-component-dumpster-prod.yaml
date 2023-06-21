@@ -17,7 +17,7 @@ spec:
   subtype: e2-medium
   lifecycle: production
   owner: [it-ops]
-  platform: [retail]
+  service: [retail]
   datacenter: [aws, gcp]
   dependsOn:
     [
@@ -42,7 +42,7 @@ spec:
   type: dns
   lifecycle: production
   owner: [eng-raccoon]
-  platform: [retail]
+  service: [retail]
   datacenter: [aws]
   dependsOn: [platform-component:wholesale-firewall]
   dependencyOf:
@@ -63,7 +63,7 @@ spec:
   type: dns
   lifecycle: production
   owner: [eng-raccoon-cloud]
-  platform: [retail]
+  service: [retail]
   datacenter: [vendor]
   dependsOn: [platform-component:dumpster-db]
   dependencyOf:
@@ -94,7 +94,7 @@ spec:
   subtype: 'postgresql 14'
   lifecycle: production
   owner: [person:daniel]
-  platform: [dumpster-prod]
+  service: [dumpster-prod]
   datacenter: [aws]
   dependencyOf: [code-component:dumpster-data]
   priority: 1
@@ -113,7 +113,7 @@ spec:
   type: database
   lifecycle: production
   owner: [person:daniel]
-  platform: [dumpster-prod]
+  service: [dumpster-prod]
   datacenter: [aws]
   dependencyOf: [code-component:dumpster-data, platform-component:dumpster-db]
   priority: 1
@@ -138,7 +138,7 @@ spec:
   subtype: public
   lifecycle: production
   owner: [eng-raccoon-cloud]
-  platform: [crates, dumpster-prod]
+  service: [crates, dumpster-prod]
   datacenter: [gcp]
   dependencyOf: [platform-component:dumpster-db, code-component:dumpster-ui]
   priority: 2
@@ -154,7 +154,7 @@ spec:
   subtype: public
   lifecycle: production
   owner: [eng-raccoon]
-  platform: [dumpster-prod]
+  service: [dumpster-prod]
   datacenter: [aws]
   dependencyOf:
     [

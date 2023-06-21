@@ -25,7 +25,7 @@ metadata:
 spec:
   type: repository
   owner: [eng-squirrel]
-  platform: crates
+  service: crates
   subcomponentOf: [code-component:crates-erp]
   uri: https://github.com/scatter-ly/crates-frontend
   languages:

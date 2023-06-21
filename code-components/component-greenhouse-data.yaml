@@ -11,5 +11,5 @@ metadata:
 spec:
   type: repository
   owner: [eng-squirrel-data, prod-squirrel-data]
-  platform: greenhouse
+  service: greenhouse
   uri: https://github.com/example/greenhouse-data

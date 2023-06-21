@@ -8,7 +8,7 @@ spec:
   type: document
   lifecycle: planning
   owner: [prod-raccoon-oss]
-  platform: dumpster-prod
+  service: dumpster-prod
   uri: https://example.com/docsdocs
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -21,7 +21,7 @@ spec:
   type: document
   lifecycle: planning
   owner: [eng-raccoon-eco]
-  platform: dumpster-prod
+  service: dumpster-prod
   uri: https://example.com/projdocs
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -35,7 +35,7 @@ spec:
   lifecycle: planning
   owner: [eng-raccoon, prod-raccoon-oss]
   dependsOn: [code-component:dumpster-data]
-  platform: dumpster-prod
+  service: dumpster-prod
   uri: https://example.com/website
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -48,5 +48,5 @@ spec:
   type: tool
   lifecycle: planning
   owner: [eng-raccoon-eco, prod-raccoon-ent]
-  platform: dumpster-prod
+  service: dumpster-prod
   uri: https://example.com/website
