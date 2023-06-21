@@ -4,7 +4,7 @@ metadata:
   name: scatterly-inc
   description: The Scatter.ly organization
   links:
-    - url: http://scatter.ly/
+    - url: http://example.com/scatterly
       title: Website
     - url: https://meta.wikimedia.org/wiki/
       title: Intranet
@@ -12,7 +12,7 @@ spec:
   type: organization
   profile:
     displayName: Scatter.ly
-    email: info@scatter.ly
+    email: scatterly@example.com
     picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
   children: [engineering, product]
 ---

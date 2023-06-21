@@ -7,7 +7,7 @@ spec:
   type: department
   profile:
     displayName: Team Squirrel
-    email: team.squirrel@scatter.ly
+    email: team.squirrel@example.com
     picture: https://avatars.dicebear.com/api/identicon/team-squirrel@example.com.svg?background=%23fff&margin=2
     timezone: America/New_York
     slackHandle: team_squirrel
