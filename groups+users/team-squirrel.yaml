@@ -7,11 +7,11 @@ spec:
   type: department
   profile:
     displayName: Team Squirrel
-    email: oc-org@example.com
+    email: team.squirrel@scatter.ly
     picture: https://avatars.dicebear.com/api/identicon/team-squirrel@example.com.svg?background=%23fff&margin=2
     timezone: America/New_York
-    slackHandle: oc
-    pagerHandle: oc
-  parent: oc-inc
+    slackHandle: team_squirrel
+    pagerHandle: team_squirrel
+  parent: scatterly-inc
   children: [eng-squirrel, prod-squirrel]
-  members: [alice, brian, jim]
+  members: []

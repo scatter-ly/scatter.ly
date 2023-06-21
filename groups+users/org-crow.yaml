@@ -12,7 +12,7 @@ spec:
     timezone: Australia/Melbourne
     slackHandle: crow-contractors
     pagerHandle: crow-contractors
-  parent: oc-inc
+  parent: scatterly-inc
   children: []
   members: [paul, michael]
 ---
