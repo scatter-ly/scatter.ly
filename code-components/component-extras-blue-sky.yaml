@@ -4,7 +4,7 @@ metadata:
   name: retail-app-extras
 spec:
   codecomponent: retail-app
-  platform: retail
+  service: retail
   lifecycle: production
   priority: 2
   sla: 8x5
@@ -15,7 +15,7 @@ metadata:
   name: retail-backend-extras
 spec:
   codecomponent: retail-backend
-  platform: retail
+  service: retail
   lifecycle: production
   priority: 2
   sla: 8x5
@@ -26,7 +26,7 @@ metadata:
   name: wholesale-cli-extras
 spec:
   codecomponent: wholesale-cli
-  platform: wholesale
+  service: wholesale
   lifecycle: experimental
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -35,5 +35,5 @@ metadata:
   name: wholesale-graphql-extras
 spec:
   codecomponent: wholesale-graphql
-  platform: wholesale
+  service: wholesale
   lifecycle: experimental

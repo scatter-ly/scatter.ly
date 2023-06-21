@@ -8,7 +8,7 @@ spec:
   type: tool
   lifecycle: production
   owner: [it-ops]
-  platform: it-platform
+  service: it-platform
   uri: https://example.com/jiraaaaaa
 ---
 apiVersion: opencontext.com/v1alpha1

@@ -1,5 +1,5 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Platform
+kind: Service
 metadata:
   name: crates
   description: Shipping & receiving platform

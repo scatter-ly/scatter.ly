@@ -1,0 +1,14 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Service
+metadata:
+  name: it-service
+  description: IT operations
+spec:
+  owner: [it-ops]
+  hasComponent:
+    [
+      aux-component:servicedesk,
+      platform-component:jira-server,
+      platform-component:servicedesk-server,
+      code-component:sandbox,
+    ]

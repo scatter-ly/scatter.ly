@@ -1,8 +1,8 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Platform
+kind: Service
 metadata:
   name: wholesale
-  description: R&D platform
+  description: R&D service
 spec:
   owner: [eng-raccoon-cloud, prod-raccoon-oss]
   scheme: blue-sky

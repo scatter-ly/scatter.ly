@@ -24,7 +24,7 @@ metadata:
 spec:
   type: library
   owner: [eng-raccoon-aws, eng-raccoon-eco]
-  platform: dumpster-prod
+  service: dumpster-prod
   uri: https://github.com/example/greenhouse-data
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -38,7 +38,7 @@ metadata:
 spec:
   type: document
   owner: [eng-raccoon-aws, eng-raccoon-eco]
-  platform: dumpster-prod
+  service: dumpster-prod
   lifecycle: production
   uri: https://www.notion.so/opencontext/Log4j-Service-Ownership-Doc-a82c3a7db8674b9f97269435017be55b
   dependsOn: [code-component:log4j]
@@ -54,7 +54,7 @@ metadata:
 spec:
   type: document
   owner: [eng-raccoon-aws, eng-raccoon-eco]
-  platform: dumpster-prod
+  service: dumpster-prod
   lifecycle: production
   uri: https://www.notion.so/opencontext/Log4j-Remediation-Plan-97618712d5c344138c2c92d50911f783
   dependsOn: [code-component:log4j]

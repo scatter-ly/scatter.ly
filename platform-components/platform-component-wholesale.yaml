@@ -8,7 +8,7 @@ spec:
   subtype: internal
   lifecycle: experimental
   owner: [eng-raccoon-aws]
-  platform: [wholesale]
+  service: [wholesale]
   dependencyOf: ['code-component:wholesale-cli', code-component:wholesale-sdk]
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -21,7 +21,7 @@ spec:
   subtype: 'postgresql 14'
   lifecycle: production
   owner: [eng-racoon-aws, it-ops, contract-crow]
-  platform: [wholesale]
+  service: [wholesale]
   dependsOn: ['platform-component:wholesale-lb']
   dependencyOf: ['code-component:wholesale-cli']
   datacenter: [aws]
@@ -36,7 +36,7 @@ spec:
   subtype: private
   lifecycle: experimental
   owner: [eng-raccoon-aws]
-  platform: [wholesale]
+  service: [wholesale]
   datacenter: [aws]
   dependencyOf:
     [
@@ -57,7 +57,7 @@ spec:
   type: firewall
   lifecycle: experimental
   owner: [person:daniel]
-  platform: [wholesale]
+  service: [wholesale]
   datacenter: [aws]
   dependencyOf:
     [

@@ -1,8 +1,8 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Platform
+kind: Service
 metadata:
   name: retail
-  description: User experience platform
+  description: User experience service
 spec:
   owner: [eng-raccoon-eco, prod-raccoon]
   scheme: blue-sky
