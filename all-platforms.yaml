@@ -1,0 +1,10 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Location
+metadata:
+  name: oc-platforms
+  description: A collection of all OpenContext Platforms
+spec:
+  targets:
+    - ./platforms/platform-orchard.yaml
+    - ./platforms/platform-dumpster.yaml
+    - ./platforms/platform-blue-sky.yaml
