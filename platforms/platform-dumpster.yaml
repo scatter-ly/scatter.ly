@@ -1,12 +1,12 @@
 apiVersion: opencontext.com/v1alpha1
-kind: Scheme
+kind: Platform
 metadata:
   name: dumpster
   description: Everything related to the raccoon dumpster mapping project
   links:
     - url: https://dumpsters.example.com
       title: Dumpsters map
-    - url: http://example.com/schemes/orchard/dashboard
+    - url: http://example.com/platforms/orchard/dashboard
       title: Dumpster Metrics Dashboard
       icon: dashboard
 spec:
