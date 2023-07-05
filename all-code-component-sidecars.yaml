@@ -1,7 +1,7 @@
 apiVersion: opencontext.com/v1alpha1
 kind: Location
 metadata:
-  name: oc-code-component-extras
+  name: code-component-extras
   description: A collection of all OpenContext code component sidecars
 spec:
   targets:

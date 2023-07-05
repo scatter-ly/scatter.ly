@@ -1,0 +1,13 @@
+apiVersion: opencontext.com/v1alpha1
+kind: Location
+metadata:
+  name: oc-services
+  description: A collection of all OpenContext services
+spec:
+  targets:
+    - ./services/service-greenhouse.yaml
+    - ./services/service-crates.yaml
+    - ./services/service-wholesale.yaml
+    - ./services/service-retail.yaml
+    - ./services/service-dumpster-prod.yaml
+    - ./services/it-service.yaml

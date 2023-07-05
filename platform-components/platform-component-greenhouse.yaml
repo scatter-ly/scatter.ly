@@ -8,7 +8,7 @@ spec:
   subtype: external_managed
   lifecycle: production
   owner: [eng-squirrel-data]
-  platform: ['greenhouse']
+  service: ['greenhouse']
   dependencyOf:
     ['code-component:greenhouse-mobile', code-component:greenhouse-data]
 ---
@@ -22,7 +22,7 @@ spec:
   subtype: 'mysql 2'
   lifecycle: production
   owner: [eng-squirrel-data]
-  platform: ['greenhouse']
+  service: ['greenhouse']
   dependsOn: ['platform-component:greenhouse-lb']
   dependencyOf: ['code-component:greenhouse-data']
   datacenter: [aws]

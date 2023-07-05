@@ -1,7 +1,7 @@
 apiVersion: opencontext.com/v1alpha1
 kind: Location
 metadata:
-  name: oc-aux-components
+  name: aux-components
   description: A collection of all OpenContext aux components
 spec:
   targets:

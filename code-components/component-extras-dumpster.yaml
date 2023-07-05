@@ -4,7 +4,7 @@ metadata:
   name: dumpster-data-extras
 spec:
   codecomponent: dumpster-data
-  platform: dumpster-prod
+  service: dumpster-prod
   lifecycle: production
 ---
 apiVersion: opencontext.com/v1alpha1
@@ -13,7 +13,7 @@ metadata:
   name: dumpster-ui-extras
 spec:
   codecomponent: dumpster-ui
-  platform: dumpster-prod
+  service: dumpster-prod
   lifecycle: production
   priority: 1
   sla: 24x7
@@ -24,7 +24,7 @@ metadata:
   name: dumpster-map-extras
 spec:
   codecomponent: dumpster-map
-  platform: dumpster-prod
+  service: dumpster-prod
   lifecycle: production
   priority: 1
   sla: 24x7
@@ -35,7 +35,7 @@ metadata:
   name: d3-extras
 spec:
   codecomponent: d3
-  platform: dumpster-prod
+  service: dumpster-prod
   lifecycle: production
   priority: 1
   sla: 24x7

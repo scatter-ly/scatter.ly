@@ -9,6 +9,6 @@ spec:
     displayName: IT Operations
     email: it-ops@example.com
     picture: https://avatars.dicebear.com/api/identicon/it-ops@example.com.svg?background=%23fff&margin=25
-  parent: oc-inc
+  parent: scatterly-inc
   children: []
   members: [joel]

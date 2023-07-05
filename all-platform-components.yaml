@@ -1,7 +1,7 @@
 apiVersion: opencontext.com/v1alpha1
 kind: Location
 metadata:
-  name: oc-platform-components
+  name: platform-components
   description: A collection of all OpenContext platform components
 spec:
   targets:

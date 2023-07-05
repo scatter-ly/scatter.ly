@@ -8,7 +8,7 @@ spec:
   type: other
   otherType: dataset
   owner: [prod-squirrel]
-  platform: greenhouse
+  service: greenhouse
   uri: s3://greenhouse-dataset
   dependsOn: [code-component:greenhouse-data]
   datacenter: [aws]
