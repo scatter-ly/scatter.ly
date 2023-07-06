@@ -5,4 +5,4 @@ metadata:
   description: R&D service
 spec:
   owner: [eng-raccoon-cloud, prod-raccoon-oss]
-  scheme: blue-sky
+  platform: blue-sky

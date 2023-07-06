@@ -5,4 +5,4 @@ metadata:
   description: Shipping & receiving platform
 spec:
   owner: [eng-squirrel, prod-squirrel]
-  scheme: orchard
+  platform: orchard
