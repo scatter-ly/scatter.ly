@@ -5,4 +5,4 @@ metadata:
   description: User experience service
 spec:
   owner: [eng-raccoon-eco, prod-raccoon]
-  scheme: blue-sky
+  platform: blue-sky
