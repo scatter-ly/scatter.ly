@@ -24,14 +24,16 @@ description: >- # this means to ignore newlines until "baseurl:"
   Scatter.ly is a cutting-edge company with questions about how to 
   "find their fixer" and resolve incidents fast.
 domain: scatter-ly.github.io 
-baseurl: "/scatter-ly/website" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://scatter-ly.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  scatter-ly
 
 # Build settings
-theme: minima
+# theme: minima
+remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.

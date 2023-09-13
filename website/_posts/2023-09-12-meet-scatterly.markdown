@@ -2,7 +2,6 @@
 layout: post
 title:  "Meet the Scatter.ly Team!"
 date:   2023-09-12 12:45:16 -0700
-excerpt: lal lal la
 categories: intros
 ---
 
