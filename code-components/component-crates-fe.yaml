@@ -28,6 +28,9 @@ spec:
   service: crates
   subcomponentOf: [code-component:crates-erp]
   uri: https://github.com/scatter-ly/crates-frontend
+  lifecycle: production
+  priority: 1
+  sla: 24x7
   languages:
     - JavaScript
     - Dockerfile

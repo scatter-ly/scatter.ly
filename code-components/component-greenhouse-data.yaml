@@ -2,7 +2,7 @@ apiVersion: opencontext.com/v1alpha1
 kind: CodeComponent
 metadata:
   name: greenhouse-data
-  description: Greenhouse data platform
+  description: Greenhouse data service
   title: Greenhouse data backend
   tags:
     - csv
@@ -13,3 +13,4 @@ spec:
   owner: [eng-squirrel-data, prod-squirrel-data]
   service: greenhouse
   uri: https://github.com/example/greenhouse-data
+  lifecycle: production

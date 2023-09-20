@@ -25,3 +25,5 @@ spec:
   owner: [person:fernando]
   dependsOn: [code-component:wholesale-sdk]
   uri: https://github.com/example/blue-sky-cli
+  service: wholesale
+  lifecycle: experimental

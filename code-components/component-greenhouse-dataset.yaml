@@ -11,4 +11,5 @@ spec:
   service: greenhouse
   uri: s3://greenhouse-dataset
   dependsOn: [code-component:greenhouse-data]
+  lifecycle: experimental
   datacenter: [aws]

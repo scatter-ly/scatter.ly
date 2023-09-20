@@ -10,3 +10,5 @@ spec:
   type: repository
   owner: [person:fernando]
   uri: https://github.com/example/blue-sky-sdk
+  service: wholesale
+  lifecycle: experimental
