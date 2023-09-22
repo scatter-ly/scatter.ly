@@ -12,6 +12,8 @@ spec:
   type: repository
   owner: [eng-raccoon-aws, eng-raccoon-eco]
   uri: https://github.com/example/greenhouse-data
+  service: dumpster-prod
+  lifecycle: production
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponent

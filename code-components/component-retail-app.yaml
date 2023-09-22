@@ -26,6 +26,10 @@ spec:
   owner: [prod-raccoon-oss, eng-raccoon-cloud]
   dependsOn: [code-component:wholesale-graphql]
   uri: https://github.com/scatter-ly/retail-app
+  service: retail
+  lifecycle: production
+  priority: 2
+  sla: 8x5
   languages:
     - Dockerfile
     - TypeScript
@@ -223,3 +227,7 @@ spec:
   dependsOn: [code-component:wholesale-graphql]
   subcomponentOf: [code-component:retail-app]
   uri: https://example.com/retail-backend
+  service: retail
+  lifecycle: production
+  priority: 2
+  sla: 8x5
