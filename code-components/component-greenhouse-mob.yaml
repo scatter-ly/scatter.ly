@@ -16,3 +16,7 @@ spec:
   owner: [eng-squirrel-mob, eng-squirrel-qa, prod-squirrel-mob]
   dependsOn: [code-component:greenhouse-data]
   uri: https://example.com/greenhouse
+  service: greenhouse
+  lifecycle: production
+  priority: 1
+  sla: 24x7

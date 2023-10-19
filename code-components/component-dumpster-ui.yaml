@@ -26,6 +26,10 @@ spec:
   owner: [eng-raccoon-onprem, eng-raccoon-cloud, prod-raccoon-ent]
   dependsOn: [aux-component:map-thingy]
   uri: https://github.com/scatter-ly/dumpster-ui
+  service: dumpster-prod
+  lifecycle: production
+  priority: 1
+  sla: 24x7
   languages:
     - Dockerfile
     - TypeScript
@@ -62,6 +66,10 @@ spec:
   owner: [eng-raccoon-onprem, eng-raccoon-cloud]
   subcomponentOf: [code-component:dumpster-ui]
   uri: https://example.com/map-tools
+  service: dumpster-prod
+  lifecycle: production
+  priority: 1
+  sla: 24x7
 ---
 apiVersion: opencontext.com/v1alpha1
 kind: CodeComponent
@@ -81,3 +89,7 @@ spec:
   owner: [eng-raccoon-onprem, eng-raccoon-cloud]
   subcomponentOf: [code-component:dumpster-ui]
   uri: https://example.com/map-tools
+  service: dumpster-prod
+  lifecycle: production
+  priority: 1
+  sla: 24x7

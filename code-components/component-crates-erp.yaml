@@ -36,3 +36,7 @@ spec:
   owner: [eng-squirrel]
   dependsOn: [code-component:greenhouse-data]
   uri: https://example.com/erp
+  service: crates
+  lifecycle: production
+  priority: 1
+  sla: 24x7
