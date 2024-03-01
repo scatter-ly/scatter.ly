@@ -20,3 +20,4 @@ spec:
   lifecycle: production
   priority: 1
   sla: 24x7
+  snykEnabled: true

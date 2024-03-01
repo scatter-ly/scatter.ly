@@ -40,3 +40,5 @@ spec:
   lifecycle: production
   priority: 1
   sla: 24x7
+  workflowsEnabled: true
+  datadogEnabled: true
