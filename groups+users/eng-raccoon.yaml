@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: eng-raccoon
@@ -17,7 +17,7 @@ spec:
   children: [eng-raccoon-cloud, eng-raccoon-onprem, eng-raccoon-eco]
   members: [jax, fernando, daniel, brit, billy, josh]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: eng-raccoon-cloud
@@ -36,7 +36,7 @@ spec:
   children: [eng-raccoon-aws]
   members: [jax, fernando, paul]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: eng-raccoon-aws
@@ -51,7 +51,7 @@ spec:
   children: []
   members: [fernando, daniel]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: eng-raccoon-onprem
@@ -66,7 +66,7 @@ spec:
   children: []
   members: [daniel, brit, billy]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: eng-raccoon-eco
@@ -81,7 +81,7 @@ spec:
   children: []
   members: [daniel, josh, michael]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: jax
@@ -95,7 +95,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/jax@example.com.svg?background=%23fff
   memberOf: [eng-raccoon, eng-raccoon-cloud]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: fernando
@@ -110,7 +110,7 @@ spec:
     role: Manager
   memberOf: [eng-raccoon, eng-raccoon-cloud, eng-raccoon-aws]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: daniel
@@ -123,7 +123,7 @@ spec:
     role: Architect
   memberOf: [eng-raccoon, eng-raccoon-aws, eng-raccoon-onprem, eng-raccoon-eco]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: brit
@@ -135,7 +135,7 @@ spec:
     role: Team Lead
   memberOf: [eng-raccoon, eng-raccoon-onprem]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: billy
@@ -146,7 +146,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/billy@example.com.svg?background=%23fff&topChance=100&top[]=shortFlat
   memberOf: [eng-raccoon, eng-raccoon-onprem]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: josh

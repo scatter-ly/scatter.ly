@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: prod-raccoon
@@ -13,7 +13,7 @@ spec:
   children: [prod-raccoon-ent, prod-raccoon-oss]
   members: [nancy, thomas, mark, steph, joel]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: prod-raccoon-ent
@@ -28,7 +28,7 @@ spec:
   children: []
   members: [nancy]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: prod-raccoon-oss
@@ -43,7 +43,7 @@ spec:
   children: []
   members: [mark]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: nancy
@@ -54,7 +54,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/nancy@example.com.svg?background=%23fff&topChance=100&top[]=frida
   memberOf: [prod-raccoon, prod-raccoon-ent]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: thomas
@@ -65,7 +65,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/thomas@example.com.svg?background=%23fff&topChance=100&top[]=shortFlat
   memberOf: [prod-raccoon, eng-raccoon]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: mark
@@ -76,7 +76,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/mark@example.com.svg?background=%23fff&top[]=shortFlat
   memberOf: [prod-raccoon, prod-raccoon-oss]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: steph
@@ -87,7 +87,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/steph@example.com.svg?background=%23fff&facialHairChance=0
   memberOf: [prod-raccoon]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: joel

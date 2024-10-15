@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: blue-sky-docs
@@ -11,7 +11,7 @@ spec:
   service: blue-sky
   uri: https://example.com/docsdocs
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: blue-sky-proto

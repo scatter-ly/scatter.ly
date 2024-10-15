@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: wholesale-graphql
@@ -8,7 +8,6 @@ metadata:
     - graphql
 spec:
   type: repository
-  owner: [person:fernando]
+  owner: [user:fernando]
   uri: https://github.com/example/blue-sky-sdk
   service: wholesale
-  lifecycle: experimental

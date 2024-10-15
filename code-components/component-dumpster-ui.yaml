@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: dumpster-ui
@@ -46,10 +46,10 @@ spec:
       versionRange: < 1.0.2
       patchedVersion: 1.0.2
   contributors:
-    - person:scatter-ly/chris-schnaidt
-    - person:scatter-ly/jwithington
+    - user:scatter-ly/chris-schnaidt
+    - user:scatter-ly/jwithington
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: dumpster-map
@@ -64,14 +64,11 @@ metadata:
 spec:
   type: package
   owner: [eng-raccoon-onprem, eng-raccoon-cloud]
-  subcomponentOf: [code-component:dumpster-ui]
+  subcomponentOf: [codecomponent:dumpster-ui]
   uri: https://example.com/map-tools
   service: dumpster-prod
-  lifecycle: production
-  priority: 1
-  sla: 24x7
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: d3
@@ -87,9 +84,6 @@ metadata:
 spec:
   type: package
   owner: [eng-raccoon-onprem, eng-raccoon-cloud]
-  subcomponentOf: [code-component:dumpster-ui]
+  subcomponentOf: [codecomponent:dumpster-ui]
   uri: https://example.com/map-tools
   service: dumpster-prod
-  lifecycle: production
-  priority: 1
-  sla: 24x7

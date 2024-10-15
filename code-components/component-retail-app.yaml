@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: retail-app
@@ -24,23 +24,13 @@ metadata:
 spec:
   type: repository
   owner: [prod-raccoon-oss, eng-raccoon-cloud]
-  dependsOn: [code-component:wholesale-graphql]
+  dependsOn: [codecomponent:wholesale-graphql]
   uri: https://github.com/scatter-ly/retail-app
   service: retail
-  lifecycle: production
-  priority: 2
-  sla: 8x5
   languages:
     - Dockerfile
     - TypeScript
   workflowsEnabled: true
-  snykEnabled: true
-  datadogEnabled: true
-  releases:
-    - name: v0.1.1
-      uri: https://github.com/scatter-ly/retail-app/releases/tag/v0.1.1
-    - name: v0.1.0
-      uri: https://github.com/scatter-ly/retail-app/releases/tag/v0.1.0
   vulnerabilityAlerts:
     - uri: https://github.com/scatter-ly/retail-app/security/dependabot/24
       updatedAt: 2023-04-05T17:59:34Z
@@ -207,11 +197,11 @@ spec:
       versionRange: ">= 4.0.0, < 4.16.5"
       patchedVersion: 4.16.5
   contributors:
-    - person:scatter-ly/alchen99
-    - person:scatter-ly/bcornils
-    - person:scatter-ly/bdwalter
+    - user:scatter-ly/alchen99
+    - user:scatter-ly/bcornils
+    - user:scatter-ly/bdwalter
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: retail-backend
@@ -226,11 +216,9 @@ metadata:
       icon: help
 spec:
   type: repository
-  owner: [person:daniel]
-  dependsOn: [code-component:wholesale-graphql]
-  subcomponentOf: [code-component:retail-app]
+  owner: [user:daniel]
+  dependsOn: [codecomponent:wholesale-graphql]
+  subcomponentOf: [codecomponent:retail-app]
   uri: https://example.com/retail-backend
   service: retail
-  lifecycle: production
-  priority: 2
-  sla: 8x5
+

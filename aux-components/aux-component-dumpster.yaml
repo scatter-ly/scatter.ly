@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: dumpster-map-docs
@@ -11,7 +11,7 @@ spec:
   service: dumpster-prod
   uri: https://example.com/docsdocs
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: dumpster-docs
@@ -24,7 +24,7 @@ spec:
   service: dumpster-prod
   uri: https://example.com/projdocs
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: dumpster-demo
@@ -34,11 +34,11 @@ spec:
   type: website
   lifecycle: planning
   owner: [eng-raccoon, prod-raccoon-oss]
-  dependsOn: [code-component:dumpster-data]
+  dependsOn: [codecomponent:dumpster-data]
   service: dumpster-prod
   uri: https://example.com/website
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: map-thingy

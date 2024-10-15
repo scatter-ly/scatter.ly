@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: crates-fe
@@ -25,21 +25,13 @@ metadata:
 spec:
   type: repository
   owner: [eng-squirrel]
+  subcomponentOf: [codecomponent:crates-erp]
   service: crates
-  subcomponentOf: [code-component:crates-erp]
   uri: https://github.com/scatter-ly/crates-frontend
-  lifecycle: production
-  priority: 1
-  sla: 24x7
   languages:
     - JavaScript
     - Dockerfile
     - TypeScript
-  releases:
-    - name: v0.2.1
-      uri: https://github.com/scatter-ly/crates-frontend/releases/tag/v0.2.1
-    - name: v0.2.0
-      uri: https://github.com/scatter-ly/crates-frontend/releases/tag/v0.2.0
   vulnerabilityAlerts:
     - uri: https://github.com/scatter-ly/crates-frontend/security/dependabot/1
       updatedAt: 2023-02-07T20:33:18Z
@@ -50,4 +42,4 @@ spec:
       versionRange: < 1.0.2
       patchedVersion: 1.0.2
   contributors:
-    - person:scatter-ly/alchen99
+    - user:scatter-ly/alchen99

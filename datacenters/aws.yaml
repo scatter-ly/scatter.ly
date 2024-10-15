@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Datacenter
 metadata:
   name: aws
@@ -11,7 +11,7 @@ spec:
   owner: [cloud-team]
   region: us-east-1
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Datacenter
 metadata:
   name: aws-us

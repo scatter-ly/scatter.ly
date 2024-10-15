@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: eng-squirrel
@@ -20,7 +20,7 @@ spec:
   children: [eng-squirrel-mob, eng-squirrel-data, eng-squirrel-qa]
   members: [bill, martha, reshma, george, sean]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: eng-squirrel-mob
@@ -38,7 +38,7 @@ spec:
   children: []
   members: [bill, martha]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: eng-squirrel-data
@@ -56,7 +56,7 @@ spec:
   children: []
   members: [reshma, george]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: eng-squirrel-qa
@@ -74,7 +74,7 @@ spec:
   children: []
   members: [sean]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: bill
@@ -85,7 +85,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/bill@example.com.svg?background=%23fff
   memberOf: [eng-squirrel, eng-squirrel-mob]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: martha
@@ -96,7 +96,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/martha@example.com.svg?background=%23fff
   memberOf: [eng-squirrel, eng-squirrel-mob]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: reshma
@@ -107,7 +107,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/reshma@example.com.svg?background=%23fff
   memberOf: [eng-squirrel, eng-squirrel-data]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: george
@@ -121,7 +121,7 @@ spec:
     slackHandle: george
   memberOf: [eng-squirrel, eng-squirrel-data]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: sean

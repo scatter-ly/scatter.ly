@@ -1,15 +1,12 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: greenhouse-dataset
   description: Greenhouse historical data
   title: Greenhouse data archive
 spec:
-  type: other
-  otherType: dataset
+  type: dataset
   owner: [prod-squirrel]
   service: greenhouse
   uri: s3://greenhouse-dataset
-  dependsOn: [code-component:greenhouse-data]
-  lifecycle: experimental
-  datacenter: [aws]
+  dependsOn: [codecomponent:greenhouse-data]

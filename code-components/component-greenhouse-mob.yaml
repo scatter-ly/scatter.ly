@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: greenhouse-mobile
@@ -14,10 +14,6 @@ metadata:
 spec:
   type: package
   owner: [eng-squirrel-mob, eng-squirrel-qa, prod-squirrel-mob]
-  dependsOn: [code-component:greenhouse-data]
+  dependsOn: [codecomponent:greenhouse-data]
   uri: https://example.com/greenhouse
   service: greenhouse
-  lifecycle: production
-  priority: 1
-  sla: 24x7
-  snykEnabled: true

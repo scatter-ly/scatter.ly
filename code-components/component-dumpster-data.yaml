@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: dumpster-data
@@ -15,7 +15,7 @@ spec:
   service: dumpster-prod
   lifecycle: production
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: log4j
@@ -29,7 +29,7 @@ spec:
   service: dumpster-prod
   uri: https://github.com/example/greenhouse-data
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: log4j-ownership
@@ -43,9 +43,9 @@ spec:
   service: dumpster-prod
   lifecycle: production
   uri: https://www.notion.so/opencontext/Log4j-Service-Ownership-Doc-a82c3a7db8674b9f97269435017be55b
-  dependsOn: [code-component:log4j]
+  dependsOn: [codecomponent:log4j]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: log4j-remediation
@@ -59,4 +59,4 @@ spec:
   service: dumpster-prod
   lifecycle: production
   uri: https://www.notion.so/opencontext/Log4j-Remediation-Plan-97618712d5c344138c2c92d50911f783
-  dependsOn: [code-component:log4j]
+  dependsOn: [codecomponent:log4j]

@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: crates-erp
@@ -34,11 +34,7 @@ metadata:
 spec:
   type: library
   owner: [eng-squirrel]
-  dependsOn: [code-component:greenhouse-data]
-  uri: https://example.com/erp
+  dependsOn: [codecomponent:greenhouse-data]
   service: crates
-  lifecycle: production
-  priority: 1
-  sla: 24x7
+  uri: https://example.com/erp
   workflowsEnabled: true
-  datadogEnabled: true

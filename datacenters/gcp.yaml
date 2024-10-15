@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Datacenter
 metadata:
   name: gcp
@@ -9,7 +9,7 @@ spec:
   owner: [cloud-team]
   region: global
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Datacenter
 metadata:
   name: gcp-global
@@ -21,7 +21,7 @@ spec:
   region: global
   partOf: [gcp]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Datacenter
 metadata:
   name: gcp-us
@@ -33,7 +33,7 @@ spec:
   region: US
   partOf: [gcp-global]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Datacenter
 metadata:
   name: gcp-us-central1

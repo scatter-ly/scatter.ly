@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: crates-erp-website
@@ -15,7 +15,7 @@ spec:
   priority: 1
   sla: 24x5
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: crates-docs
@@ -30,7 +30,7 @@ spec:
   service: crates
   uri: https://example.com/docs
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: greenhouse-docs
@@ -43,7 +43,7 @@ spec:
   service: greenhouse
   uri: https://example.com/moredocs
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: crates-erp-rfc
@@ -57,9 +57,9 @@ spec:
   owner: [prod-squirrel]
   service: crates
   uri: https://www.notion.so/opencontext/Crates-ERP-Architectural-RFC-282de1305a614140ac630fae1601e65e
-  dependsOn: [code-component:crates-erp]
+  dependsOn: [codecomponent:crates-erp]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: crates-erp-rules
@@ -73,9 +73,9 @@ spec:
   owner: [eng-squirrel]
   service: crates
   uri: https://www.notion.so/opencontext/Crates-ERP-Compliance-Rules-8ce786dee95142138a883280eefb59a9
-  dependsOn: [code-component:crates-erp]
+  dependsOn: [codecomponent:crates-erp]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: crates-erp-security
@@ -89,9 +89,9 @@ spec:
   owner: [eng-squirrel]
   service: crates
   uri: https://www.notion.so/opencontext/Crates-ERP-Threat-Model-cb23445f42ad43a3be217621c3a46148
-  dependsOn: [code-component:crates-erp]
+  dependsOn: [codecomponent:crates-erp]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: crates-erp-ownership
@@ -105,9 +105,9 @@ spec:
   owner: [prod-squirrel]
   service: crates
   uri: https://www.notion.so/opencontext/Crates-ERP-Service-Ownership-Doc-6e53655f504e4aeaa74cb18c3e82bc74
-  dependsOn: [code-component:crates-erp]
+  dependsOn: [codecomponent:crates-erp]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: retail-app-maintenance
@@ -121,9 +121,9 @@ spec:
   owner: [eng-squirrel]
   service: retail
   uri: https://www.notion.so/opencontext/Retail-App-Maintenance-49a977c54d074d1aae70eea154a1680e
-  dependsOn: [code-component:retail-app]
+  dependsOn: [codecomponent:retail-app]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: retail-app-threat-model
@@ -137,9 +137,9 @@ spec:
   owner: [eng-squirrel]
   service: retail
   uri: https://www.notion.so/opencontext/Retail-App-Threat-Model-a02f5c6c4ee24400a94bf8953e420387
-  dependsOn: [code-component:retail-app]
+  dependsOn: [codecomponent:retail-app]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: retail-app-migration-plan
@@ -153,9 +153,9 @@ spec:
   owner: [prod-squirrel]
   service: retail
   uri: https://www.notion.so/opencontext/Retail-App-Migration-Plan-300557d741b34c6d87993f1c31e7130a
-  dependsOn: [code-component:retail-app]
+  dependsOn: [codecomponent:retail-app]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: retail-app-ownership
@@ -169,4 +169,4 @@ spec:
   owner: [prod-squirrel]
   service: retail
   uri: https://www.notion.so/opencontext/Retail-App-Service-Ownership-Doc-6361695aea6f443ab78ad49926258f21
-  dependsOn: [code-component:retail-app]
+  dependsOn: [codecomponent:retail-app]

@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: crates-db
@@ -20,11 +20,11 @@ spec:
   service: [crates]
   datacenter: [aws]
   dependsOn: [datacenter:aws]
-  dependencyOf: [code-component:crates-erp]
+  dependencyOf: [codecomponent:crates-erp]
   priority: 2
   sla: 24x5
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: crates-config
@@ -45,12 +45,12 @@ spec:
   owner: [eng-squirrel]
   service: [crates]
   datacenter: [aws]
-  dependencyOf: [service-component:crates-db, code-component:crates-erp]
+  dependencyOf: [service-component:crates-db, codecomponent:crates-erp]
   uri: s3://crates-config
   priority: 3
   sla: 24x5
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: crates-ssl
@@ -65,6 +65,6 @@ spec:
   owner: [eng-squirrel]
   service: [crates]
   datacenter: [aws]
-  dependencyOf: [platform-component:crates-db, code-component:crates-erp]
+  dependencyOf: [platform-component:crates-db, codecomponent:crates-erp]
   priority: 3
   sla: 24x5
