@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: contract-crow
@@ -16,7 +16,7 @@ spec:
   children: []
   members: [paul, michael]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: paul
@@ -33,7 +33,7 @@ spec:
     role: Engineer
   memberOf: [contract-crow, eng-raccoon-cloud]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: michael

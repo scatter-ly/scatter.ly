@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: jira
@@ -11,7 +11,7 @@ spec:
   service: it-platform
   uri: https://example.com/jiraaaaaa
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: servicedesk

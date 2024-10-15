@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: dev-core-info
@@ -16,7 +16,7 @@ spec:
   lifecycle: production
   owner: [scatter-ly/dev-core]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: reviewers-info
@@ -37,7 +37,7 @@ spec:
   lifecycle: production
   owner: [scatter-ly/reviewers]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: eng-raccoon-info
@@ -55,7 +55,7 @@ spec:
   lifecycle: production
   owner: [eng-raccoon]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: eng-raccoon-cloud-info
@@ -73,7 +73,7 @@ spec:
   lifecycle: production
   owner: [eng-raccoon-cloud]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: AuxComponent
 metadata:
   name: eng-squirrel-info

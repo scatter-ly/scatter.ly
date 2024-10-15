@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: dumpster-vm
@@ -25,11 +25,11 @@ spec:
       'platform-component:dumpster-secrets',
       'platform-component:dumpster-config',
     ]
-  dependencyOf: ['code-component:dumpster-ui']
+  dependencyOf: ['codecomponent:dumpster-ui']
   priority: 1
   sla: 24x7
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: dumpster-cloud-dns
@@ -47,14 +47,14 @@ spec:
   dependsOn: [platform-component:wholesale-firewall]
   dependencyOf:
     [
-      'code-component:dumpster-ui',
+      'codecomponent:dumpster-ui',
       'platform-component:dumpster-lb',
       'platform-component:dumpster-secrets',
     ]
   priority: 1
   sla: 24x7
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: dumpster-noncloud-dns
@@ -68,14 +68,14 @@ spec:
   dependsOn: [platform-component:dumpster-db]
   dependencyOf:
     [
-      'code-component:dumpster-ui',
+      'codecomponent:dumpster-ui',
       'platform-component:dumpster-lb',
       'platform-component:dumpster-secrets',
     ]
   priority: 1
   sla: 24x5
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: dumpster-db
@@ -93,14 +93,14 @@ spec:
   type: database
   subtype: 'postgresql 14'
   lifecycle: production
-  owner: [person:daniel]
+  owner: [user:daniel]
   service: [dumpster-prod]
   datacenter: [aws]
-  dependencyOf: [code-component:dumpster-data]
+  dependencyOf: [codecomponent:dumpster-data]
   priority: 1
   sla: 12x7
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: dumpster-db-vend
@@ -112,14 +112,14 @@ metadata:
 spec:
   type: database
   lifecycle: production
-  owner: [person:daniel]
+  owner: [user:daniel]
   service: [dumpster-prod]
   datacenter: [aws]
-  dependencyOf: [code-component:dumpster-data, platform-component:dumpster-db]
+  dependencyOf: [codecomponent:dumpster-data, platform-component:dumpster-db]
   priority: 1
   sla: 12x7
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: dumpster-config
@@ -140,11 +140,11 @@ spec:
   owner: [eng-raccoon-cloud]
   service: [crates, dumpster-prod]
   datacenter: [gcp]
-  dependencyOf: [platform-component:dumpster-db, code-component:dumpster-ui]
+  dependencyOf: [platform-component:dumpster-db, codecomponent:dumpster-ui]
   priority: 2
   sla: 24x5
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: dumpster-secrets
@@ -159,7 +159,7 @@ spec:
   dependencyOf:
     [
       platform-component:dumpster-db,
-      code-component:dumpster-ui,
+      codecomponent:dumpster-ui,
       platform-component:retail-vm,
     ]
   uri: s3://crates-config

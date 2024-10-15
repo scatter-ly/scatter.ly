@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: wholesale-cli
@@ -22,8 +22,7 @@ metadata:
       icon: dashboard
 spec:
   type: package
-  owner: [person:fernando]
-  dependsOn: [code-component:wholesale-sdk]
+  owner: [user:fernando]
+  dependsOn: [codecomponent:wholesale-sdk]
   uri: https://github.com/example/blue-sky-cli
   service: wholesale
-  lifecycle: experimental

@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: scatterly-inc
@@ -16,7 +16,7 @@ spec:
     picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
   children: [engineering, product]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: engineering
@@ -31,7 +31,7 @@ spec:
   children:
     [eng-squirrel, eng-raccoon, scatter-ly/reviewers, scatter-ly/docs-core, scatter-ly/dev-core, scatter-ly/maintainers]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: product
@@ -45,7 +45,7 @@ spec:
   parent: scatterly-inc
   children: [prod-squirrel, prod-raccoon]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Location
 metadata:
   name: scatterly-teams

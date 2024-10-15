@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: CodeComponent
 metadata:
   name: greenhouse-data
@@ -13,4 +13,3 @@ spec:
   owner: [eng-squirrel-data, prod-squirrel-data]
   service: greenhouse
   uri: https://github.com/example/greenhouse-data
-  lifecycle: production

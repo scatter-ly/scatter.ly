@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: User
 metadata:
   name: jax
@@ -10,7 +10,7 @@ spec:
     displayName: Jax
     displayEmail: jax@scatterly.com
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: User
 metadata:
   name: fernando
@@ -22,7 +22,7 @@ spec:
     displayName: Fernando
     displayEmail: fernando@scatterly.com
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: User
 metadata:
   name: paul

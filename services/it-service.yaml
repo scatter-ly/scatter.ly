@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Service
 metadata:
   name: it-service
@@ -10,5 +10,5 @@ spec:
       aux-component:servicedesk,
       platform-component:jira-server,
       platform-component:servicedesk-server,
-      code-component:sandbox,
+      codecomponent:sandbox,
     ]

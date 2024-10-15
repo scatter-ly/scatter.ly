@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: retail-vm
@@ -21,11 +21,11 @@ spec:
   datacenter: [aws, gcp]
   dependsOn:
     ['platform-component:wholesale-lb', 'platform-component:wholesale-secrets']
-  dependencyOf: ['code-component:retail-app', 'code-component:retail-backend']
+  dependencyOf: ['codecomponent:retail-app', 'codecomponent:retail-backend']
   priority: 1
   sla: 24x7
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: retail-dns
@@ -44,8 +44,8 @@ spec:
   datacenter: [gcp]
   dependencyOf:
     [
-      'code-component:retail-app',
-      'code-component:retail-backend',
+      'codecomponent:retail-app',
+      'codecomponent:retail-backend',
       'platform-component:wholesale-lb',
       'platform-component:wholesale-secrets',
     ]

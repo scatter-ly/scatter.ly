@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: wholesale-lb
@@ -9,9 +9,9 @@ spec:
   lifecycle: experimental
   owner: [eng-raccoon-aws]
   service: [wholesale]
-  dependencyOf: ['code-component:wholesale-cli', code-component:wholesale-sdk]
+  dependencyOf: ['codecomponent:wholesale-cli', codecomponent:wholesale-sdk]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: wholesale-db
@@ -23,10 +23,10 @@ spec:
   owner: [eng-racoon-aws, it-ops, contract-crow]
   service: [wholesale]
   dependsOn: ['platform-component:wholesale-lb']
-  dependencyOf: ['code-component:wholesale-cli']
+  dependencyOf: ['codecomponent:wholesale-cli']
   datacenter: [aws]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: wholesale-secrets
@@ -42,13 +42,13 @@ spec:
     [
       platform-component:wholesale-lb,
       platform-component:wholesale-db,
-      code-component:wholesale-cli,
+      codecomponent:wholesale-cli,
     ]
   uri: s3://all-the-secrets
   priority: 2
   sla: 24x5
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: wholesale-firewall
@@ -56,14 +56,14 @@ metadata:
 spec:
   type: firewall
   lifecycle: experimental
-  owner: [person:daniel]
+  owner: [user:daniel]
   service: [wholesale]
   datacenter: [aws]
   dependencyOf:
     [
       platform-component:wholesale-lb,
       platform-component:wholesale-db,
-      code-component:wholesale-sdk,
+      codecomponent:wholesale-sdk,
     ]
   priority: 1
   sla: 24x5

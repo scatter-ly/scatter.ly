@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: jira-server
@@ -12,7 +12,7 @@ spec:
   priority: 2
   sla: 24x7
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: PlatformComponent
 metadata:
   name: servicedesk-server

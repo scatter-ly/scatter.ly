@@ -1,4 +1,4 @@
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: prod-squirrel
@@ -13,7 +13,7 @@ spec:
   children: [prod-squirrel-mob, prod-squirrel-data]
   members: [sam, stacie, joe, sophie]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: prod-squirrel-mob
@@ -28,7 +28,7 @@ spec:
   children: []
   members: [sam, stacie]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Team
 metadata:
   name: prod-squirrel-data
@@ -43,7 +43,7 @@ spec:
   children: []
   members: [joe, sophie]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: sam
@@ -54,7 +54,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/sam@example.com.svg?background=%23fff
   memberOf: [prod-squirrel, prod-squirrel-mob]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: stacie
@@ -65,7 +65,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/stacie@example.com.svg?background=%23fff&topChance=100&top[]=bun
   memberOf: [prod-squirrel, prod-squirrel-mob]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: joe
@@ -76,7 +76,7 @@ spec:
     picture: https://avatars.dicebear.com/api/avataaars/joe@example.com.svg?background=%23fff&topChance=100&top[]=sides
   memberOf: [prod-squirrel, prod-squirrel-data]
 ---
-apiVersion: opencontext.com/v1alpha1
+apiVersion: 3mor.io/v1alpha1
 kind: Person
 metadata:
   name: sophie
